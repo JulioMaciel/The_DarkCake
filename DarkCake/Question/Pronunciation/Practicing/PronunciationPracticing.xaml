@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="AussieCake.Question.PronunPract"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FontSize="14">
+
+    <Grid Name="userControlGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <CheckBox Name="cb_justTH" Grid.Row="0" Grid.Column="0" Content="Practice just TH sound" 
+                  HorizontalAlignment="Right" Margin="0, 8, 8, 0" />
+
+        <Label Name="lblWord" FontSize="75" 
+                   Grid.Row="1" Grid.Column="0" Background="Gainsboro"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Label Name="lblPhonemes" FontSize="75" Margin="0,0,0,100"
+                   Grid.Row="2" Grid.Column="0" Background="Gainsboro" Foreground="MidnightBlue"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+
+            <Button Name="btnOpenSite"  Content="Try it!" Width="125" 
+                Margin="0, 2, 8, 2" HorizontalAlignment="Right" Click="BtnOpenSite_Click" />
+
+            <Button Name="btnListenAgain" Content="Listen again" Width="125" 
+                Margin="0, 2, 8, 2" HorizontalAlignment="Right" Click="BtnListenAgain_Click" />
+
+            <Button Name="btnNext" Content="Next" Width="125" 
+                Margin="0, 2, 2, 2" HorizontalAlignment="Right" Click="BtnNext_Click" />
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

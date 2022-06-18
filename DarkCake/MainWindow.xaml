@@ -1,0 +1,104 @@
+﻿<Window x:Class="AussieCake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+        WindowStartupLocation="CenterScreen"
+        Title="Aussie Cake" Height="624" Width="1000"
+        Icon=".\\Images\Icons\there_is_no_cake.ico"
+		ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="Background" Value="#ffffff"/>
+                <Setter Property="BorderBrush" Value="#141414"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Foreground" Value="#333333"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="16,3,16,3"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Name="Chrome"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="true">
+                                <ContentPresenter Name="Presenter" Margin="{TemplateBinding Padding}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Foreground" Value="#333333" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ffc299" />
+                                    <Setter Property="BorderBrush" Value="#cccccc" />
+                                    <Setter Property="Foreground" Value="#333333" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#ffa366" />
+                                    <Setter Property="BorderBrush" Value="#1ba1e2"/>
+                                    <Setter Property="Foreground" Value="#ffffff"/>
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="true">
+                                    <Setter TargetName="Chrome" Property="BorderBrush" Value="#1ba1e2" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#373737">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition Height="24" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Name="Logo" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom">
+            <Label Content="Dark Cake" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" 
+                   Foreground="#f2564f" VerticalAlignment="Bottom" />
+        </StackPanel>
+
+        <StackPanel Name="Menu" Grid.Column="0" Grid.Row="1" Margin="10,20,10,10">
+            <Button Content="Vocabulary" Name="btnVocabulary" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocabulary_Click" Margin="0,0,0,6" Background="LightGray" />
+            <Button Content="Vocabulary Challenge" Name="btnVocChallenge" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocChallenge_Click" Margin="0,0,0,6" Background="LightGray" />
+            <Button Content="Spelling" Name="btnSpelling" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnSpelling_Click" Margin="0,0,0,6" />
+            <Button Content="Spelling Challenge" Name="btnSpellChallenge" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnSpellChallenge_Click" Margin="0,0,0,6" />
+            <Button Content="Pronunciation" Name="btnPronunciation" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPronunciation_Click" Margin="0,0,0,6" />
+            <Button Content="Pronunciation Practicing" Name="btnPronunPract" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPronunPract_Click" Margin="0,0,0,6" />
+            <Button Content="Essay" Name="btnEssay" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnEssay_Click" Margin="0,0,0,6"/>
+            <Button Content="Essay by Topic" IsEnabled="false" Name="btnEssayByTopic" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnEssayByTopic_Click" Margin="0,0,0,6"/>
+            <Button Content="Describe Image" Name="btnDescImg" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnDescImg_Click" Margin="0,0,0,6"/>
+            <Button Content="Summarize Spoken Text" Name="btnSumRetell" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnSumRetell_Click" Margin="0,0,0,6" />
+            <Button Content="Pearson FIB" Name="btnPearsonFIB" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPearsonFIB_Click" Margin="0,0,0,6" Background="LightGray" />
+            <Button Content="Pearson Ditaction" Name="btnPearsonDit" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPearsonDit_Click" Margin="0,0,0,6" />
+       <!-- <Button Content="Rename Move Last Audio" Name="btnLastAudio" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnLastAudio_Click" Margin="0,20,0,6" /> -->
+        </StackPanel>
+
+        <UserControl Name="ContentControl" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+            <Frame Name="frame_content" NavigationUIVisibility="Hidden" />
+        </UserControl>
+
+        <Border BorderBrush="DarkGray" BorderThickness="0,1,0,0" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackPanel Name="Footer" Background="LightGray" Orientation="Horizontal">
+                <TextBlock Name="lblFooter" Text="Aussie Cake is alive." Margin="4,0,0,0" MinWidth="878" VerticalAlignment="Center" />
+                <Button Name="btnShowDetails" Content="Show details" Height="20" 
+                        Width="100" Background="Snow" Visibility="Collapsed" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

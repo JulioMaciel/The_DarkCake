@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="AussieCake.Templates.DescImg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      FontSize="14" Loaded="UserControl_Loaded">
+
+    <Grid Name="userControlGrid" Background="#777777">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*" />
+            <ColumnDefinition Width="0.33*" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.75*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Last days" VerticalAlignment="Center" />
+        <TextBox Name="txtFilter" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
+        <Button Grid.Row="0" Grid.Column="2" Content="Filter" VerticalAlignment="Center" Margin="2,0,2,0" 
+                Click="Filter_Click" />
+
+        <Label Grid.Row="0" Grid.Column="3" Content="Difficulty" VerticalAlignment="Center" />
+        <Slider Name="slider" Grid.Row="0" Grid.Column="4" Maximum="100" TickPlacement="BottomRight" 
+                VerticalAlignment="Center"  IsMoveToPointEnabled="True" Margin="1,0,1,0" 
+                TickFrequency="20" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"
+                IsEnabled="True" />
+        <Button Name="btnStart" Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" Margin="2,0,2,0" 
+                Click="BtnStart_Click"/>
+        <Button Name="btnStartInit" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" Margin="2,0,2,0" 
+                Content="Init" Click="BtnStart_ClickInit"/>
+        <Button Name="btnStartStressed" Grid.Row="0" Grid.Column="7" VerticalAlignment="Center" Margin="2,0,2,0" 
+                Content="Stressed" Click="BtnStart_ClickStressed"/>
+
+        <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="8" Background="#373737" Margin="0,0,2,0">
+            <Image HorizontalAlignment="Center" DockPanel.Dock="Top" Name="imgTemplateType" Margin="5,10,5,10"
+                   MaxHeight="310" />
+            <StackPanel DockPanel.Dock="Bottom" Background="#edf2f7" Margin="5,5,5,5">
+                <StackPanel Name="StkTemplate" Margin="5,5,5,5"  />
+            </StackPanel>
+        </DockPanel>
+
+        <Label Name="lblScore" Grid.Column="4" Grid.Row="3" FontSize="18" Background="#edf2f7" Visibility="Hidden" HorizontalContentAlignment="Center" />
+
+        <Button Name="btnFinish" Content="Finish" Grid.Row="2" Grid.Column="7" Margin="2,2,2,2" 
+                Click="BtnFinish_Click" IsEnabled="False" />
+
+    </Grid>
+</UserControl>

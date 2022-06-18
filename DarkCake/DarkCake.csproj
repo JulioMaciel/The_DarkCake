@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D517D7E3-2C51-4E2F-ABCD-85367160D621}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DarkCake</RootNamespace>
+    <AssemblyName>DarkCake</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\X64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X64|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\X64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X64|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\X64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>there_is_no_cake.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.5.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.5.1\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Challenge\Sentences.cs" />
+    <Compile Include="Challenge\SpellingChallenge.xaml.cs">
+      <DependentUpon>SpellingChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Challenge\WPF\ChallengeWpfItem.cs" />
+    <Compile Include="Context\ScriptFileCommands.cs" />
+    <Compile Include="Context\SqLiteCommands.cs" />
+    <Compile Include="Attempt\AttemptsController.cs" />
+    <Compile Include="Challenge\WPF\ChallengeWPFController.cs" />
+    <Compile Include="Challenge\VocabularyChallenge.xaml.cs">
+      <DependentUpon>VocabularyChallenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Pearson\Ditaction\P_Dit_Model.cs" />
+    <Compile Include="Question\Pearson\Ditaction\P_Dit_Challenge.xaml.cs">
+      <DependentUpon>P_Dit_Challenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Pearson\Fill in the blanks\P_FIB_Model.cs" />
+    <Compile Include="Question\Pearson\Ditaction\P_Dit_VM.cs" />
+    <Compile Include="Question\Pearson\Fill in the blanks\P_FIB_VM.cs" />
+    <Compile Include="Question\Pearson\Fill in the blanks\P_FIB_Challenge.xaml.cs">
+      <DependentUpon>P_FIB_Challenge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Pearson\IPearsonVM.cs" />
+    <Compile Include="Question\Pronunciation\Practicing\PronunciationPracticing.xaml.cs">
+      <DependentUpon>PronunciationPracticing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Spelling\SpellingController.cs" />
+    <Compile Include="Question\Spelling\SpellingFilter.cs" />
+    <Compile Include="Question\Spelling\SpellingModel.cs" />
+    <Compile Include="Question\Spelling\Spellings.xaml.cs">
+      <DependentUpon>Spellings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Spelling\SpellingVM.cs" />
+    <Compile Include="Question\Spelling\WPF\SpellingWpfController.cs" />
+    <Compile Include="Question\Spelling\WPF\SpellingWpfHeader.cs" />
+    <Compile Include="Question\Spelling\WPF\SpellingWpfItem.cs" />
+    <Compile Include="Question\Pronunciation\Pronunciations.xaml.cs">
+      <DependentUpon>Pronunciations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Question\Pronunciation\PronunciationController.cs" />
+    <Compile Include="Question\Pronunciation\PronunciationFilter.cs" />
+    <Compile Include="Question\Pronunciation\PronunciationModel.cs" />
+    <Compile Include="Question\Pronunciation\PronunciationVM.cs" />
+    <Compile Include="Question\Pronunciation\WPF\PronunciationWpfController.cs" />
+    <Compile Include="Question\Pronunciation\WPF\PronunciationWpfHeader.cs" />
+    <Compile Include="Question\Pronunciation\WPF\PronunciationWpfItem.cs" />
+    <Compile Include="Question\Vocabulary\VocabularyFilter.cs" />
+    <Compile Include="Question\Vocabulary\VocabularyModel.cs" />
+    <Compile Include="Question\Vocabulary\VocabularyController.cs" />
+    <Compile Include="Question\Vocabulary\WPF\VocabularyWpfHeader.cs" />
+    <Compile Include="Question\Vocabulary\WPF\VocabularyWpfItem.cs" />
+    <Compile Include="Question\QuestionModel.cs" />
+    <Compile Include="Question\QuestionsController.cs" />
+    <Compile Include="Question\QuestionVM.cs" />
+    <Compile Include="Question\QuestionFilter.cs" />
+    <Compile Include="Question\WPF\IQuestWpfHeader.cs" />
+    <Compile Include="Question\WPF\QuestionWpfHeader.cs" />
+    <Compile Include="Question\WPF\QuestionWpfItem.cs" />
+    <Compile Include="Templates\DescImg\DescImg.xaml.cs">
+      <DependentUpon>DescImg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DescImg\DescImgVM.cs" />
+    <Compile Include="Templates\DescImg\TemplateDescImg.cs" />
+    <Compile Include="Templates\Essay\ByTopic.xaml.cs">
+      <DependentUpon>ByTopic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Essay\Essay.xaml.cs">
+      <DependentUpon>Essay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Essay\EssayVM.cs" />
+    <Compile Include="Templates\SumRetell\SumRetell.xaml.cs">
+      <DependentUpon>SumRetell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\SumRetell\SumRetellVM.cs" />
+    <Compile Include="Templates\SumRetell\TemplateSumRetell.cs" />
+    <Compile Include="Templates\Template.cs" />
+    <Compile Include="Templates\TemplateWPF.cs" />
+    <Compile Include="Templates\Essay\TemplateEssay.cs" />
+    <Compile Include="UnitTests\CollocationTests.cs" />
+    <Compile Include="Util\FileHtmlControls.cs" />
+    <Compile Include="Util\IFilter.cs" />
+    <Compile Include="Util\PluralNounHelper.cs" />
+    <Compile Include="Util\WPF\Footer.cs" />
+    <Compile Include="Util\WPF\MyButtons.cs" />
+    <Compile Include="Util\WPF\MyCheckBoxes.cs" />
+    <Compile Include="Util\WPF\MyComboBoxes.cs" />
+    <Compile Include="Util\WPF\MyGrids.cs" />
+    <Compile Include="Util\WPF\MyLabels.cs" />
+    <Compile Include="Util\WPF\MyStacks.cs" />
+    <Compile Include="Util\WPF\MyTxts.cs" />
+    <Compile Include="Util\Errors.cs" />
+    <Compile Include="Question\WPF\QuestionWpfUtil.cs" />
+    <Compile Include="Verb\VerbsController.cs" />
+    <Compile Include="Util\Model.cs" />
+    <Compile Include="Verb\VerbModel.cs" />
+    <Compile Include="Util\CakePaths.cs" />
+    <Compile Include="Util\UtilExtensions.cs" />
+    <Compile Include="Question\Vocabulary\WPF\VocabularyWpfController.cs" />
+    <Compile Include="Util\WPF\UtilWPF.cs" />
+    <Compile Include="Question\IQuestion.cs" />
+    <Compile Include="Attempt\AttemptVM.cs" />
+    <Compile Include="Question\Vocabulary\VocabularyVM.cs" />
+    <Compile Include="Question\Vocabulary\Vocabularies.xaml.cs">
+      <DependentUpon>Vocabularies.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Challenge\SpellingChallenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context\SqLiteHelper.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Challenge\VocabularyChallenge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Question\Pearson\Ditaction\P_Dit_Challenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Question\Pearson\Fill in the blanks\P_FIB_Challenge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Question\Pronunciation\Practicing\PronunciationPracticing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Question\Spelling\Spellings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Question\Pronunciation\Pronunciations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Question\Vocabulary\Vocabularies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Templates\DescImg\DescImg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\Essay\ByTopic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Templates\Essay\Essay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\SumRetell\SumRetell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cake.sqlite">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Question\Pearson\Fill in the blanks\P_FIB_WPF.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\DescribeImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Context\Scripts\Insert_Collocations.sql" />
+    <Content Include="Context\Scripts\Insert_Sentences.sql" />
+    <Content Include="Context\Scripts\Insert_Verbs.sql" />
+    <Content Include="Resources\Pearson\asq_animals_with_trunk_elephant.mp3" />
+    <Content Include="Resources\Pearson\asq_apart_from_method_division.mp3" />
+    <Content Include="Resources\Pearson\asq_before_airplanes_by_ship.mp3" />
+    <Content Include="Resources\Pearson\asq_computer_telephone_invented_typewriter.mp3" />
+    <Content Include="Resources\Pearson\asq_does_altitude_length_height.mp3" />
+    <Content Include="Resources\Pearson\asq_how_do_migration_migration.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_1000_years.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_100_years.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_10_years.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_29_days.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_dozen_12.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_english_26.mp3" />
+    <Content Include="Resources\Pearson\asq_how_many_have_5.mp3" />
+    <Content Include="Resources\Pearson\asq_how_much_quarters_75.mp3" />
+    <Content Include="Resources\Pearson\asq_how_would_earth_extinct.mp3" />
+    <Content Include="Resources\Pearson\asq_how_would_plants_archaeologists.mp3" />
+    <Content Include="Resources\Pearson\asq_how_would_water_melting.mp3" />
+    <Content Include="Resources\Pearson\asq_if_a_has_toxin.mp3" />
+    <Content Include="Resources\Pearson\asq_if_someones_slow_quick.mp3" />
+    <Content Include="Resources\Pearson\asq_if_there_picked_black.mp3" />
+    <Content Include="Resources\Pearson\asq_if_you_date_signature.mp3" />
+    <Content Include="Resources\Pearson\asq_if_you_to_dentist.mp3" />
+    <Content Include="Resources\Pearson\asq_in_which_chemistry_physics.mp3" />
+    <Content Include="Resources\Pearson\asq_in_which_from_east.mp3" />
+    <Content Include="Resources\Pearson\asq_oral_english__tolerant.mp3" />
+    <Content Include="Resources\Pearson\asq_some_calendars_week_monday.mp3" />
+    <Content Include="Resources\Pearson\asq_the_instructions_food_recipe.mp3" />
+    <Content Include="Resources\Pearson\asq_the_name_books_library.mp3" />
+    <Content Include="Resources\Pearson\asq_under_which_low_unemployment.mp3" />
+    <Content Include="Resources\Pearson\asq_what_are_guitar_strings.mp3" />
+    <Content Include="Resources\Pearson\asq_what_attitude_passive_enthusiastic.mp3" />
+    <Content Include="Resources\Pearson\asq_what_can_space_spacecraft.mp3" />
+    <Content Include="Resources\Pearson\asq_what_century_21st_century.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_airplane_seatbelt.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_away_binocular.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_candle_wick.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_etc_flowers.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_information_index.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_length_length.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_machines_birds.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_of_contents.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_olympic_games.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_stars_telescope.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_temperature_thermometer.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_tons_weight.mp3" />
+    <Content Include="Resources\Pearson\asq_what_do_water_ice.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_100_50.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_body_blood.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_chemistry_water.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_cigarette_nicotine.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_forearm_elbow.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_from_wood.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_item_receipt.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_keys_piano.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_magazine_headline.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_maps_atlas.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_national_borders.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_other_friction.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_periodic_table.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_positive_negative.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_postgraduate_after.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_predecessor_successor.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_reserved_books.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_restaurant_chef.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_shoes_shoelace.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_still_moving.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_the_sun.mp3" />
+    <Content Include="Resources\Pearson\asq_what_is_works_copyright.mp3" />
+    <Content Include="Resources\Pearson\asq_what_kind_eat_meat.mp3" />
+    <Content Include="Resources\Pearson\asq_what_kind_life_autobiography.mp3" />
+    <Content Include="Resources\Pearson\asq_what_kind_understand_dictionary.mp3" />
+    <Content Include="Resources\Pearson\asq_what_material_of_rubber.mp3" />
+    <Content Include="Resources\Pearson\asq_what_natural_carpenter_wood.mp3" />
+    <Content Include="Resources\Pearson\asq_what_publication_news_newspaper.mp3" />
+    <Content Include="Resources\Pearson\asq_what_would_hospital_patient.mp3" />
+    <Content Include="Resources\Pearson\asq_when_something_3_times.mp3" />
+    <Content Include="Resources\Pearson\asq_when_your_have_fracture.mp3" />
+    <Content Include="Resources\Pearson\asq_when_you_go_map.mp3" />
+    <Content Include="Resources\Pearson\asq_where_does_live_desert.mp3" />
+    <Content Include="Resources\Pearson\asq_where_do_post_office.mp3" />
+    <Content Include="Resources\Pearson\asq_which_day_thursday_wednesday.mp3" />
+    <Content Include="Resources\Pearson\asq_which_of_car_model.mp3" />
+    <Content Include="Resources\Pearson\asq_which_of_running_parachuting.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_air_plane.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_aridity_aridity.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_a_desert.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_dolphin_butterfly.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_jogging_running.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_journals_journals.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_mermaid_giraffe.mp3" />
+    <Content Include="Resources\Pearson\asq_which_one_paper_paper.mp3" />
+    <Content Include="Resources\Pearson\asq_which_part_bibliography_bibliography.mp3" />
+    <Content Include="Resources\Pearson\asq_which_part_examine_eyes.mp3" />
+    <Content Include="Resources\Pearson\asq_which_sweet_produce_honey.mp3" />
+    <Content Include="Resources\Pearson\asq_which_word_computer_download.mp3" />
+    <Content Include="Resources\Pearson\asq_whose_job_hospital_doctor.mp3" />
+    <Content Include="Resources\Pearson\asq_who_is_teeth_dentist.mp3" />
+    <Content Include="Resources\Pearson\asq_who_sits_airplane_pilot.mp3" />
+    <Content Include="Resources\Pearson\asq_why_bees_agriculture_pollination.mp3" />
+    <Content Include="Resources\Pearson\fibrw_according_to_and_insects.mp3" />
+    <Content Include="Resources\Pearson\fibrw_according_to_became_vaccination.mp3" />
+    <Content Include="Resources\Pearson\fibrw_alaskas_aleutian_the_islands.mp3" />
+    <Content Include="Resources\Pearson\fibrw_an_exhibit_private_collections.mp3" />
+    <Content Include="Resources\Pearson\fibrw_arbitration_is_deemed_suitable.mp3" />
+    <Content Include="Resources\Pearson\fibrw_arguably_the_the_sun.mp3" />
+    <Content Include="Resources\Pearson\fibrw_a_dog_experimental_animal.mp3" />
+    <Content Include="Resources\Pearson\fibrw_a_herbal_centuries_later.mp3" />
+    <Content Include="Resources\Pearson\fibrw_chemistry_is_the_body.mp3" />
+    <Content Include="Resources\Pearson\fibrw_david_lynch_changed_world.mp3" />
+    <Content Include="Resources\Pearson\fibrw_distance_learning_to_classes.mp3" />
+    <Content Include="Resources\Pearson\fibrw_drive_down_more_reliable.mp3" />
+    <Content Include="Resources\Pearson\fibrw_ee_energy_childhood_obesity.mp3" />
+    <Content Include="Resources\Pearson\fibrw_eggeating_snakes_the_throat.mp3" />
+    <Content Include="Resources\Pearson\fibrw_english_has_of_mistreatment.mp3" />
+    <Content Include="Resources\Pearson\fibrw_equally_critical_water_issues.mp3" />
+    <Content Include="Resources\Pearson\fibrw_equitable_and_and_regulations.mp3" />
+    <Content Include="Resources\Pearson\fibrw_essays_are_academic_style.mp3" />
+    <Content Include="Resources\Pearson\fibrw_fancy_locust_insect_fragments.mp3" />
+    <Content Include="Resources\Pearson\fibrw_fans_of_mortal_world.mp3" />
+    <Content Include="Resources\Pearson\fibrw_folklore_a_oral_tradition.mp3" />
+    <Content Include="Resources\Pearson\fibrw_for_many_your_friends.mp3" />
+    <Content Include="Resources\Pearson\fibrw_if_you_planet_building.mp3" />
+    <Content Include="Resources\Pearson\fibrw_impressionism_was_plain_air.mp3" />
+    <Content Include="Resources\Pearson\fibrw_interior_design_airport_terminals.mp3" />
+    <Content Include="Resources\Pearson\fibrw_in_2001_and_festus.mp3" />
+    <Content Include="Resources\Pearson\fibrw_in_an_bronze_medallists.mp3" />
+    <Content Include="Resources\Pearson\fibrw_in_an_the_belt.mp3" />
+    <Content Include="Resources\Pearson\fibrw_in_a_on_personality.mp3" />
+    <Content Include="Resources\Pearson\fibrw_japan_adopted_own_culture.mp3" />
+    <Content Include="Resources\Pearson\fibrw_jean_piaget_thinking_seriously.mp3" />
+    <Content Include="Resources\Pearson\fibrw_language_comes_i_love.mp3" />
+    <Content Include="Resources\Pearson\fibrw_legal_deposit_to_come.mp3" />
+    <Content Include="Resources\Pearson\fibrw_leonard_lauder_and_perfumes.mp3" />
+    <Content Include="Resources\Pearson\fibrw_life_expectancy_islander_peoples.mp3" />
+    <Content Include="Resources\Pearson\fibrw_measuring_poverty_latin_america.mp3" />
+    <Content Include="Resources\Pearson\fibrw_movement_in_british_impressionist.mp3" />
+    <Content Include="Resources\Pearson\fibrw_nature_is_scissoring_beaks.mp3" />
+    <Content Include="Resources\Pearson\fibrw_no_one_our_trust.mp3" />
+    <Content Include="Resources\Pearson\fibrw_no_two_same_way.mp3" />
+    <Content Include="Resources\Pearson\fibrw_opportunity_cost_earned_instead.mp3" />
+    <Content Include="Resources\Pearson\fibrw_over_the_original_streets.mp3" />
+    <Content Include="Resources\Pearson\fibrw_paris_is_torn_down.mp3" />
+    <Content Include="Resources\Pearson\fibrw_people_move_to_move.mp3" />
+    <Content Include="Resources\Pearson\fibrw_sales_jobs_are_going.mp3" />
+    <Content Include="Resources\Pearson\fibrw_scientists_make_of_world.mp3" />
+    <Content Include="Resources\Pearson\fibrw_sound_depressing_since_2003.mp3" />
+    <Content Include="Resources\Pearson\fibrw_the_horned_hear_it.mp3" />
+    <Content Include="Resources\Pearson\fibrw_the_last_greets_visitors.mp3" />
+    <Content Include="Resources\Pearson\fibrw_this_is_major_role.mp3" />
+    <Content Include="Resources\Pearson\fibrw_want_to_generally_unsuccessful.mp3" />
+    <Content Include="Resources\Pearson\fibrw_when_it_the_job.mp3" />
+    <Content Include="Resources\Pearson\fibrw_when_i_current_occupation.mp3" />
+    <Content Include="Resources\Pearson\fibrw_with_their_of_extinction.mp3" />
+    <Content Include="Resources\Pearson\fibrw_you_have_the_examiners.mp3" />
+    <Content Include="Resources\Pearson\fibr_although_environmentalists_positive_action.mp3" />
+    <Content Include="Resources\Pearson\fibr_although_for_therapeutic_use.mp3" />
+    <Content Include="Resources\Pearson\fibr_attempts_to_educational_practice.mp3" />
+    <Content Include="Resources\Pearson\fibr_australia_and_the_community.mp3" />
+    <Content Include="Resources\Pearson\fibr_away_from_1812_overture.mp3" />
+    <Content Include="Resources\Pearson\fibr_by_2025_into_space.mp3" />
+    <Content Include="Resources\Pearson\fibr_chemicals_used_herbicide_pollution.mp3" />
+    <Content Include="Resources\Pearson\fibr_colorful_poison_major_role.mp3" />
+    <Content Include="Resources\Pearson\fibr_down_the_behaviour_habits.mp3" />
+    <Content Include="Resources\Pearson\fibr_friedman_showed_get_richer.mp3" />
+    <Content Include="Resources\Pearson\fibr_how_is_it_finds.mp3" />
+    <Content Include="Resources\Pearson\fibr_in_these_the_sky.mp3" />
+    <Content Include="Resources\Pearson\fibr_in_the_takes_off.mp3" />
+    <Content Include="Resources\Pearson\fibr_justintime_is_as_materials.mp3" />
+    <Content Include="Resources\Pearson\fibr_music_is_infants_survival.mp3" />
+    <Content Include="Resources\Pearson\fibr_now_that_abandoning_altogether.mp3" />
+    <Content Include="Resources\Pearson\fibr_omniscience_may_of_them.mp3" />
+    <Content Include="Resources\Pearson\fibr_shark_bite_burgess_said.mp3" />
+    <Content Include="Resources\Pearson\fibr_sportswomens_records_lost_too.mp3" />
+    <Content Include="Resources\Pearson\fibr_surely_reality_of_reality.mp3" />
+    <Content Include="Resources\Pearson\fibr_sustainable_job_in_britain.mp3" />
+    <Content Include="Resources\Pearson\fibr_the_allure_junk_food.mp3" />
+    <Content Include="Resources\Pearson\fibr_the_amount_nights_sleep.mp3" />
+    <Content Include="Resources\Pearson\fibr_two_decades_and_murdered.mp3" />
+    <Content Include="Resources\Pearson\fibr_you_can_study_habits.mp3" />
+    <Content Include="Resources\Pearson\ra_akimbo_this_or_contempt.mp3" />
+    <Content Include="Resources\Pearson\ra_although_it_the_us.mp3" />
+    <Content Include="Resources\Pearson\ra_as_to_among_writers.mp3" />
+    <Content Include="Resources\Pearson\ra_at_the_the_funds.mp3" />
+    <Content Include="Resources\Pearson\ra_augustus_was_their_loyalty.mp3" />
+    <Content Include="Resources\Pearson\ra_australians_do_of_english.mp3" />
+    <Content Include="Resources\Pearson\ra_a_young_become_shakespeare.mp3" />
+    <Content Include="Resources\Pearson\ra_ever_since_a_living.mp3" />
+    <Content Include="Resources\Pearson\ra_exhilarating_exhausting_one_pain.mp3" />
+    <Content Include="Resources\Pearson\ra_firstyear_university_each_wheel.mp3" />
+    <Content Include="Resources\Pearson\ra_for_any_the_process.mp3" />
+    <Content Include="Resources\Pearson\ra_how_quickly_within_lifetime.mp3" />
+    <Content Include="Resources\Pearson\ra_hundreds_of_soon_forgotten.mp3" />
+    <Content Include="Resources\Pearson\ra_if_bonus_and_rewarded.mp3" />
+    <Content Include="Resources\Pearson\ra_introvert_or_being_social.mp3" />
+    <Content Include="Resources\Pearson\ra_in_classes_at_halftime.mp3" />
+    <Content Include="Resources\Pearson\ra_in_his_kept_submerged.mp3" />
+    <Content Include="Resources\Pearson\ra_it_isnt_mba_program.mp3" />
+    <Content Include="Resources\Pearson\ra_legal_writing_often_required.mp3" />
+    <Content Include="Resources\Pearson\ra_lincolns_apparently_military_necessity.mp3" />
+    <Content Include="Resources\Pearson\ra_long_isolated_russians_themselves.mp3" />
+    <Content Include="Resources\Pearson\ra_major_breeding_usually_sparse.mp3" />
+    <Content Include="Resources\Pearson\ra_orientalists_like_collective_realities.mp3" />
+    <Content Include="Resources\Pearson\ra_pluto_lost_with_applause.mp3" />
+    <Content Include="Resources\Pearson\ra_solar_energy_solar_power.mp3" />
+    <Content Include="Resources\Pearson\ra_the_beginning_never_before.mp3" />
+    <Content Include="Resources\Pearson\ra_the_brain_right_side.mp3" />
+    <Content Include="Resources\Pearson\ra_the_core_wage_earners.mp3" />
+    <Content Include="Resources\Pearson\ra_the_diversity_and_knowledge.mp3" />
+    <Content Include="Resources\Pearson\ra_the_grand_years_ago.mp3" />
+    <Content Include="Resources\Pearson\ra_the_japanese_must_perform.mp3" />
+    <Content Include="Resources\Pearson\ra_the_semiconductor_device_technologies.mp3" />
+    <Content Include="Resources\Pearson\ra_the_uniquely_the_product.mp3" />
+    <Content Include="Resources\Pearson\ra_this_book_before_choosing.mp3" />
+    <Content Include="Resources\Pearson\ra_this_is_take_action.mp3" />
+    <Content Include="Resources\Pearson\ra_this_study_who_died.mp3" />
+    <Content Include="Resources\Pearson\ra_two_sisters_very_lenient.mp3" />
+    <Content Include="Resources\Pearson\ra_weakness_in_advised_higher.mp3" />
+    <Content Include="Resources\Pearson\ra_when_countries_million_hectares.mp3" />
+    <Content Include="Resources\Pearson\ra_while_blue_lose_appetite.mp3" />
+    <Content Include="Resources\Pearson\ra_yellow_is_if_overused.mp3" />
+    <Content Include="Resources\Pearson\rl_arctic_is_the_sea.mp3" />
+    <Content Include="Resources\Pearson\rl_developed_countries_everyones_interests.mp3" />
+    <Content Include="Resources\Pearson\rl_if_you_million_years.mp3" />
+    <Content Include="Resources\Pearson\rl_like_other_paris_itself.mp3" />
+    <Content Include="Resources\Pearson\rl_linguists_are_the_dominance.mp3" />
+    <Content Include="Resources\Pearson\rl_nasa_has_to_understand.mp3" />
+    <Content Include="Resources\Pearson\rl_primarily_robots_the_society.mp3" />
+    <Content Include="Resources\Pearson\rl_there_is_different_countries.mp3" />
+    <Content Include="Resources\Pearson\rl_the_lecture_toxic_chemicals.mp3" />
+    <Content Include="Resources\Pearson\rl_the_lecture_years_old.mp3" />
+    <Content Include="Resources\Pearson\rs_all_of_academic_buildings.mp3" />
+    <Content Include="Resources\Pearson\rs_all_undergraduate_the_seminar.mp3" />
+    <Content Include="Resources\Pearson\rs_answering_this_absolutely_impossible.mp3" />
+    <Content Include="Resources\Pearson\rs_a_computer_my_files.mp3" />
+    <Content Include="Resources\Pearson\rs_a_demonstrated_is_bigotry.mp3" />
+    <Content Include="Resources\Pearson\rs_a_preliminary_spring_break.mp3" />
+    <Content Include="Resources\Pearson\rs_a_thorough_every_assignment.mp3" />
+    <Content Include="Resources\Pearson\rs_being_a_other_meat.mp3" />
+    <Content Include="Resources\Pearson\rs_conferences_are_the_month.mp3" />
+    <Content Include="Resources\Pearson\rs_could_you_your_row.mp3" />
+    <Content Include="Resources\Pearson\rs_dont_forget_next_week.mp3" />
+    <Content Include="Resources\Pearson\rs_dr_greens_the_building.mp3" />
+    <Content Include="Resources\Pearson\rs_eating_too_your_health.mp3" />
+    <Content Include="Resources\Pearson\rs_elephant_is_living_mammal.mp3" />
+    <Content Include="Resources\Pearson\rs_even_with_still_impossible.mp3" />
+    <Content Include="Resources\Pearson\rs_fishing_is_for_surviving.mp3" />
+    <Content Include="Resources\Pearson\rs_he_was_xvi_century.mp3" />
+    <Content Include="Resources\Pearson\rs_if_you_jenny_brice.mp3" />
+    <Content Include="Resources\Pearson\rs_if_you_original_receipts.mp3" />
+    <Content Include="Resources\Pearson\rs_interpreters_are_this_department.mp3" />
+    <Content Include="Resources\Pearson\rs_in_europe_regarding_globalization.mp3" />
+    <Content Include="Resources\Pearson\rs_in_the_in_america.mp3" />
+    <Content Include="Resources\Pearson\rs_it_is_the_figures.mp3" />
+    <Content Include="Resources\Pearson\rs_it_is_this_claim.mp3" />
+    <Content Include="Resources\Pearson\rs_i_cant_doctors_appointment.mp3" />
+    <Content Include="Resources\Pearson\rs_i_didnt_on_immigration.mp3" />
+    <Content Include="Resources\Pearson\rs_i_used_one_sugar.mp3" />
+    <Content Include="Resources\Pearson\rs_i_will_to_twelve.mp3" />
+    <Content Include="Resources\Pearson\rs_i_would_orange_juice.mp3" />
+    <Content Include="Resources\Pearson\rs_make_sure_your_sources.mp3" />
+    <Content Include="Resources\Pearson\rs_meeting_with_additional_help.mp3" />
+    <Content Include="Resources\Pearson\rs_meteorology_is_earths_atmosphere.mp3" />
+    <Content Include="Resources\Pearson\rs_most_animals_are_square.mp3" />
+    <Content Include="Resources\Pearson\rs_nearly_half_educational_program.mp3" />
+    <Content Include="Resources\Pearson\rs_newspapers_across_of_presidents.mp3" />
+    <Content Include="Resources\Pearson\rs_no_more_at_once.mp3" />
+    <Content Include="Resources\Pearson\rs_number_the_before_tomorrow.mp3" />
+    <Content Include="Resources\Pearson\rs_on_behalf_your_participation.mp3" />
+    <Content Include="Resources\Pearson\rs_on_this_of_three.mp3" />
+    <Content Include="Resources\Pearson\rs_organic_food_artificial_additives.mp3" />
+    <Content Include="Resources\Pearson\rs_physics_is_and_energy.mp3" />
+    <Content Include="Resources\Pearson\rs_portfolio_is_than_tuesday.mp3" />
+    <Content Include="Resources\Pearson\rs_put_the_the_table.mp3" />
+    <Content Include="Resources\Pearson\rs_reserved_collection_3_hours.mp3" />
+    <Content Include="Resources\Pearson\rs_residents_hall_the_semester.mp3" />
+    <Content Include="Resources\Pearson\rs_students_can_the_website.mp3" />
+    <Content Include="Resources\Pearson\rs_student_discount_coffee_house.mp3" />
+    <Content Include="Resources\Pearson\rs_the_application_of_term.mp3" />
+    <Content Include="Resources\Pearson\rs_the_bookstore_the_library.mp3" />
+    <Content Include="Resources\Pearson\rs_the_caf_running_overnight.mp3" />
+    <Content Include="Resources\Pearson\rs_the_caf_the_night.mp3" />
+    <Content Include="Resources\Pearson\rs_the_clear_always_fascinating.mp3" />
+    <Content Include="Resources\Pearson\rs_the_college_the_world.mp3" />
+    <Content Include="Resources\Pearson\rs_the_contest_human_history.mp3" />
+    <Content Include="Resources\Pearson\rs_the_gap_as_expected.mp3" />
+    <Content Include="Resources\Pearson\rs_the_glass_crystal_structure.mp3" />
+    <Content Include="Resources\Pearson\rs_the_lecture_pack_building.mp3" />
+    <Content Include="Resources\Pearson\rs_the_lecture_until_friday.mp3" />
+    <Content Include="Resources\Pearson\rs_the_library_student_center.mp3" />
+    <Content Include="Resources\Pearson\rs_the_minimal_than_75.mp3" />
+    <Content Include="Resources\Pearson\rs_the_office_freshman_seminar.mp3" />
+    <Content Include="Resources\Pearson\rs_the_original_religious_festivals.mp3" />
+    <Content Include="Resources\Pearson\rs_the_politics_political_authorities.mp3" />
+    <Content Include="Resources\Pearson\rs_the_professor_this_evening.mp3" />
+    <Content Include="Resources\Pearson\rs_the_psychology_research_projects.mp3" />
+    <Content Include="Resources\Pearson\rs_the_recent_the_argument.mp3" />
+    <Content Include="Resources\Pearson\rs_the_small_snowy_islands.mp3" />
+    <Content Include="Resources\Pearson\rs_the_student_different_issues.mp3" />
+    <Content Include="Resources\Pearson\rs_the_study_international_fieldwork.mp3" />
+    <Content Include="Resources\Pearson\rs_the_timetable_next_week.mp3" />
+    <Content Include="Resources\Pearson\rs_the_united_parliamentary_democracy.mp3" />
+    <Content Include="Resources\Pearson\rs_the_united_recent_years.mp3" />
+    <Content Include="Resources\Pearson\rs_the_us_of_gdp.mp3" />
+    <Content Include="Resources\Pearson\rs_the_verdict_the_jury.mp3" />
+    <Content Include="Resources\Pearson\rs_the_wheelchair_this_month.mp3" />
+    <Content Include="Resources\Pearson\rs_to_receive_original_receipts.mp3" />
+    <Content Include="Resources\Pearson\rs_we_are_before_friday.mp3" />
+    <Content Include="Resources\Pearson\rs_we_are_our_faculty.mp3" />
+    <Content Include="Resources\Pearson\rs_we_must_analyzing_data.mp3" />
+    <Content Include="Resources\Pearson\rs_we_must_the_week.mp3" />
+    <Content Include="Resources\Pearson\rs_what_distinguishes_white_photography.mp3" />
+    <Content Include="Resources\Pearson\rs_would_you_lefthand_side.mp3" />
+    <Content Include="Resources\Pearson\rs_you_can_the_reception.mp3" />
+    <Content Include="Resources\Pearson\rs_you_should_of_school.mp3" />
+    <Content Include="Resources\Pearson\rs_you_should_registration_form.mp3" />
+    <Content Include="Resources\Pearson\sst_amory_lovins_was_crazy.mp3" />
+    <Content Include="Resources\Pearson\sst_australia_has_up_significantly.mp3" />
+    <Content Include="Resources\Pearson\sst_before_we_receiving_media.mp3" />
+    <Content Include="Resources\Pearson\sst_citizens_of_its_esteem.mp3" />
+    <Content Include="Resources\Pearson\sst_due_to_primary_position.mp3" />
+    <Content Include="Resources\Pearson\sst_however_we_happens_much.mp3" />
+    <Content Include="Resources\Pearson\sst_in_the_universe_works.mp3" />
+    <Content Include="Resources\Pearson\sst_i_have_is_now.mp3" />
+    <Content Include="Resources\Pearson\sst_i_want_childrens_books.mp3" />
+    <Content Include="Resources\Pearson\sst_last_month_the_curriculum.mp3" />
+    <Content Include="Resources\Pearson\sst_laughter_is_and_identity.mp3" />
+    <Content Include="Resources\Pearson\sst_one_hundred_the_workforce.mp3" />
+    <Content Include="Resources\Pearson\sst_people_previously_national_output.mp3" />
+    <Content Include="Resources\Pearson\sst_since_the_and_neuroscientists.mp3" />
+    <Content Include="Resources\Pearson\sst_there_are_and_space.mp3" />
+    <Content Include="Resources\Pearson\sst_there_are_recognized_problems.mp3" />
+    <Content Include="Resources\Pearson\sst_there_can_global_scale.mp3" />
+    <Content Include="Resources\Pearson\sst_the_1990s_good_idea.mp3" />
+    <Content Include="Resources\Pearson\sst_the_deficiency_companies_requirements.mp3" />
+    <Content Include="Resources\Pearson\sst_the_education_nonprofit_organizations.mp3" />
+    <Content Include="Resources\Pearson\sst_the_impact_for_them.mp3" />
+    <Content Include="Resources\Pearson\sst_the_need_the_system.mp3" />
+    <Content Include="Resources\Pearson\sst_the_notions_years_ago.mp3" />
+    <Content Include="Resources\Pearson\sst_the_quality_writing_style.mp3" />
+    <Content Include="Resources\Pearson\sst_the_trading_agricultural_productivity.mp3" />
+    <Content Include="Resources\Pearson\sst_this_lecture_population_growth.mp3" />
+    <Content Include="Resources\Pearson\sst_to_understand_as_alert.mp3" />
+    <Content Include="Resources\Pearson\sst_youve_got_of_devices.mp3" />
+    <Content Include="Resources\Pearson\wfd_all_of_faculty_office.mp3" />
+    <Content Include="Resources\Pearson\wfd_all_students_forthcoming_elections.mp3" />
+    <Content Include="Resources\Pearson\wfd_animals_raised_wild_counterparts.mp3" />
+    <Content Include="Resources\Pearson\wfd_architectural_numbers_interesting_experiment.mp3" />
+    <Content Include="Resources\Pearson\wfd_ask_a_further_assistance.mp3" />
+    <Content Include="Resources\Pearson\wfd_assignments_should_the_deadline.mp3" />
+    <Content Include="Resources\Pearson\wfd_a_good_is_repetition.mp3" />
+    <Content Include="Resources\Pearson\wfd_before_submitting_your_application.mp3" />
+    <Content Include="Resources\Pearson\wfd_behind_the_by_mules.mp3" />
+    <Content Include="Resources\Pearson\wfd_both_staff_permit_online.mp3" />
+    <Content Include="Resources\Pearson\wfd_checking_the_discounted_textbooks.mp3" />
+    <Content Include="Resources\Pearson\wfd_climate_change_reputable_scientists.mp3" />
+    <Content Include="Resources\Pearson\wfd_clinical_placement_professional_practice.mp3" />
+    <Content Include="Resources\Pearson\wfd_control_systems_in_accuracy.mp3" />
+    <Content Include="Resources\Pearson\wfd_everyone_must_fire_drill.mp3" />
+    <Content Include="Resources\Pearson\wfd_free_campus_prospective_students.mp3" />
+    <Content Include="Resources\Pearson\wfd_good_research_real_people.mp3" />
+    <Content Include="Resources\Pearson\wfd_governments_need_to_people.mp3" />
+    <Content Include="Resources\Pearson\wfd_if_finance_be_available.mp3" />
+    <Content Include="Resources\Pearson\wfd_it_is_your_sources.mp3" />
+    <Content Include="Resources\Pearson\wfd_it_was_would_react.mp3" />
+    <Content Include="Resources\Pearson\wfd_i_thought_meeting_room.mp3" />
+    <Content Include="Resources\Pearson\wfd_key_business_expense_accounts.mp3" />
+    <Content Include="Resources\Pearson\wfd_many_graduates_communications_field.mp3" />
+    <Content Include="Resources\Pearson\wfd_most_of_previous_system.mp3" />
+    <Content Include="Resources\Pearson\wfd_most_students_issue_before.mp3" />
+    <Content Include="Resources\Pearson\wfd_mutually_exclusive_or_opposite.mp3" />
+    <Content Include="Resources\Pearson\wfd_native_speakers_own_language.mp3" />
+    <Content Include="Resources\Pearson\wfd_observers_waited_the_concert.mp3" />
+    <Content Include="Resources\Pearson\wfd_our_courses_learning_skills.mp3" />
+    <Content Include="Resources\Pearson\wfd_our_professor_development_conference.mp3" />
+    <Content Include="Resources\Pearson\wfd_participants_initially_foundation_subjects.mp3" />
+    <Content Include="Resources\Pearson\wfd_please_click_the_site.mp3" />
+    <Content Include="Resources\Pearson\wfd_radio_is_the_world.mp3" />
+    <Content Include="Resources\Pearson\wfd_resources_and_reference_desk.mp3" />
+    <Content Include="Resources\Pearson\wfd_review_all_any_conclusions.mp3" />
+    <Content Include="Resources\Pearson\wfd_science_library_the_library.mp3" />
+    <Content Include="Resources\Pearson\wfd_scientists_are_more_money.mp3" />
+    <Content Include="Resources\Pearson\wfd_she_used_student_newspaper.mp3" />
+    <Content Include="Resources\Pearson\wfd_students_are_been_cancelled.mp3" />
+    <Content Include="Resources\Pearson\wfd_students_are_own_attendance.mp3" />
+    <Content Include="Resources\Pearson\wfd_students_concession_application_form.mp3" />
+    <Content Include="Resources\Pearson\wfd_students_have_or_apartments.mp3" />
+    <Content Include="Resources\Pearson\wfd_supply_and_in_economics.mp3" />
+    <Content Include="Resources\Pearson\wfd_teaching_assistants_for_housing.mp3" />
+    <Content Include="Resources\Pearson\wfd_that_means_the_labs.mp3" />
+    <Content Include="Resources\Pearson\wfd_there_is_and_psychology.mp3" />
+    <Content Include="Resources\Pearson\wfd_there_is_batch_production.mp3" />
+    <Content Include="Resources\Pearson\wfd_there_is_of_education.mp3" />
+    <Content Include="Resources\Pearson\wfd_they_developed_their_employees.mp3" />
+    <Content Include="Resources\Pearson\wfd_they_were_service_pay.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_aerial_thorough_evaluation.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_application_than_expected.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_article_interesting_experiments.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_artists_of_critics.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_business_local_firm.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_celebrated_great_controversy.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_chemistry_the_campus.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_citys_became_law.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_commissioner_all_authorities.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_evaluation_university_personnel.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_first_of_september.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_history_lecture_theatre.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_library_economic_history.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_massive_communicable_argument.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_nation_for_trade.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_new_accepted_theories.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_placement_every_semester.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_qualification_to_approach.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_railways_for_everyone.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_same_and_problems.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_same_the_problem.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_seminar_other_students.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_sociology_regarded_worldwide.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_students_before_friday.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_synopsis_important_information.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_teacher_the_task.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_theme_compositional_style.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_toughest_is_funding.mp3" />
+    <Content Include="Resources\Pearson\wfd_the_ways_constantly_changing.mp3" />
+    <Content Include="Resources\Pearson\wfd_this_mornings_been_cancelled.mp3" />
+    <Content Include="Resources\Pearson\wfd_those_who_for_information.mp3" />
+    <Content Include="Resources\Pearson\wfd_tribes_work_monolithic_statues.mp3" />
+    <Content Include="Resources\Pearson\wfd_undergraduates_pursue_specific_programs.mp3" />
+    <Content Include="Resources\Pearson\wfd_university_departments_by_faculty.mp3" />
+    <Content Include="Resources\Pearson\wfd_unusual_patterns_more_difficult.mp3" />
+    <Content Include="Resources\Pearson\wfd_we_cant_this_stage.mp3" />
+    <Content Include="Resources\Pearson\wfd_we_study_around_us.mp3" />
+    <Content Include="Resources\Pearson\wfd_when_workers_their_prices.mp3" />
+    <Content Include="Resources\Pearson\wfd_while_reconciliation_be_addressed.mp3" />
+    <Content Include="Resources\Pearson\wfd_your_lowest_the_calculations.mp3" />
+    <Content Include="Resources\Pearson\wfd_you_are_by_monday.mp3" />
+    <Content Include="Resources\Pearson\wfd_you_can_by_email.mp3" />
+    <Content Include="Resources\Pearson\wfd_you_will_the_commencement.mp3" />
+    <Content Include="Resources\Pronunciations\abrupt.mp3" />
+    <Content Include="Resources\Pronunciations\absolutely.mp3" />
+    <Content Include="Resources\Pronunciations\acceptance.mp3" />
+    <Content Include="Resources\Pronunciations\accommodation.mp3" />
+    <Content Include="Resources\Pronunciations\accretion.mp3" />
+    <Content Include="Resources\Pronunciations\accuracy.mp3" />
+    <Content Include="Resources\Pronunciations\accurate.mp3" />
+    <Content Include="Resources\Pronunciations\achieve.mp3" />
+    <Content Include="Resources\Pronunciations\achieved.mp3" />
+    <Content Include="Resources\Pronunciations\achievement.mp3" />
+    <Content Include="Resources\Pronunciations\acknowledge.mp3" />
+    <Content Include="Resources\Pronunciations\acquire.mp3" />
+    <Content Include="Resources\Pronunciations\actively.mp3" />
+    <Content Include="Resources\Pronunciations\acute.mp3" />
+    <Content Include="Resources\Pronunciations\address.mp3" />
+    <Content Include="Resources\Pronunciations\addresses.mp3" />
+    <Content Include="Resources\Pronunciations\adequate.mp3" />
+    <Content Include="Resources\Pronunciations\adopt.mp3" />
+    <Content Include="Resources\Pronunciations\adulthood.mp3" />
+    <Content Include="Resources\Pronunciations\adverse.mp3" />
+    <Content Include="Resources\Pronunciations\advertising.mp3" />
+    <Content Include="Resources\Pronunciations\affirm.mp3" />
+    <Content Include="Resources\Pronunciations\again.mp3" />
+    <Content Include="Resources\Pronunciations\allocate.mp3" />
+    <Content Include="Resources\Pronunciations\ambassador.mp3" />
+    <Content Include="Resources\Pronunciations\ambiguous.mp3" />
+    <Content Include="Resources\Pronunciations\Amendment.mp3" />
+    <Content Include="Resources\Pronunciations\analysis.mp3" />
+    <Content Include="Resources\Pronunciations\ancient.mp3" />
+    <Content Include="Resources\Pronunciations\and.mp3" />
+    <Content Include="Resources\Pronunciations\animal.mp3" />
+    <Content Include="Resources\Pronunciations\annual.mp3" />
+    <Content Include="Resources\Pronunciations\Antarctica.mp3" />
+    <Content Include="Resources\Pronunciations\anticipate.mp3" />
+    <Content Include="Resources\Pronunciations\apparent.mp3" />
+    <Content Include="Resources\Pronunciations\approach.mp3" />
+    <Content Include="Resources\Pronunciations\appropriate.mp3" />
+    <Content Include="Resources\Pronunciations\appropriately.mp3" />
+    <Content Include="Resources\Pronunciations\archaeologist.mp3" />
+    <Content Include="Resources\Pronunciations\archaeology.mp3" />
+    <Content Include="Resources\Pronunciations\artillery.mp3" />
+    <Content Include="Resources\Pronunciations\as.mp3" />
+    <Content Include="Resources\Pronunciations\assessed.mp3" />
+    <Content Include="Resources\Pronunciations\assignment.mp3" />
+    <Content Include="Resources\Pronunciations\assignments.mp3" />
+    <Content Include="Resources\Pronunciations\assumption.mp3" />
+    <Content Include="Resources\Pronunciations\athletic.mp3" />
+    <Content Include="Resources\Pronunciations\attention.mp3" />
+    <Content Include="Resources\Pronunciations\attitude.mp3" />
+    <Content Include="Resources\Pronunciations\authorities.mp3" />
+    <Content Include="Resources\Pronunciations\authority.mp3" />
+    <Content Include="Resources\Pronunciations\automatically.mp3" />
+    <Content Include="Resources\Pronunciations\autumn.mp3" />
+    <Content Include="Resources\Pronunciations\available.mp3" />
+    <Content Include="Resources\Pronunciations\average.mp3" />
+    <Content Include="Resources\Pronunciations\award.mp3" />
+    <Content Include="Resources\Pronunciations\awareness.mp3" />
+    <Content Include="Resources\Pronunciations\bacteria.mp3" />
+    <Content Include="Resources\Pronunciations\basis.mp3" />
+    <Content Include="Resources\Pronunciations\believe.mp3" />
+    <Content Include="Resources\Pronunciations\belongings.mp3" />
+    <Content Include="Resources\Pronunciations\bibliography.mp3" />
+    <Content Include="Resources\Pronunciations\big.mp3" />
+    <Content Include="Resources\Pronunciations\bilingual.mp3" />
+    <Content Include="Resources\Pronunciations\biodegradable.mp3" />
+    <Content Include="Resources\Pronunciations\bleached.mp3" />
+    <Content Include="Resources\Pronunciations\body.mp3" />
+    <Content Include="Resources\Pronunciations\bonus.mp3" />
+    <Content Include="Resources\Pronunciations\boredom.mp3" />
+    <Content Include="Resources\Pronunciations\bottom-up.mp3" />
+    <Content Include="Resources\Pronunciations\boundary.mp3" />
+    <Content Include="Resources\Pronunciations\broaden.mp3" />
+    <Content Include="Resources\Pronunciations\building.mp3" />
+    <Content Include="Resources\Pronunciations\buildings.mp3" />
+    <Content Include="Resources\Pronunciations\caffeine.mp3" />
+    <Content Include="Resources\Pronunciations\calligraphy.mp3" />
+    <Content Include="Resources\Pronunciations\campaign.mp3" />
+    <Content Include="Resources\Pronunciations\career.mp3" />
+    <Content Include="Resources\Pronunciations\catalogue.mp3" />
+    <Content Include="Resources\Pronunciations\category.mp3" />
+    <Content Include="Resources\Pronunciations\ceremonies.mp3" />
+    <Content Include="Resources\Pronunciations\ceremony.mp3" />
+    <Content Include="Resources\Pronunciations\challenge.mp3" />
+    <Content Include="Resources\Pronunciations\characteristic.mp3" />
+    <Content Include="Resources\Pronunciations\chemical.mp3" />
+    <Content Include="Resources\Pronunciations\chemistry.mp3" />
+    <Content Include="Resources\Pronunciations\chief.mp3" />
+    <Content Include="Resources\Pronunciations\chocolate.mp3" />
+    <Content Include="Resources\Pronunciations\circle.mp3" />
+    <Content Include="Resources\Pronunciations\circulation.mp3" />
+    <Content Include="Resources\Pronunciations\circumscribe.mp3" />
+    <Content Include="Resources\Pronunciations\circumstance.mp3" />
+    <Content Include="Resources\Pronunciations\circumstances.mp3" />
+    <Content Include="Resources\Pronunciations\city.mp3" />
+    <Content Include="Resources\Pronunciations\climate.mp3" />
+    <Content Include="Resources\Pronunciations\clothes.mp3" />
+    <Content Include="Resources\Pronunciations\coat.mp3" />
+    <Content Include="Resources\Pronunciations\collaborative.mp3" />
+    <Content Include="Resources\Pronunciations\colleague.mp3" />
+    <Content Include="Resources\Pronunciations\commercial.mp3" />
+    <Content Include="Resources\Pronunciations\commission.mp3" />
+    <Content Include="Resources\Pronunciations\committed.mp3" />
+    <Content Include="Resources\Pronunciations\communication.mp3" />
+    <Content Include="Resources\Pronunciations\competition.mp3" />
+    <Content Include="Resources\Pronunciations\competitive.mp3" />
+    <Content Include="Resources\Pronunciations\compliment.mp3" />
+    <Content Include="Resources\Pronunciations\comprehensive.mp3" />
+    <Content Include="Resources\Pronunciations\concept.mp3" />
+    <Content Include="Resources\Pronunciations\cone.mp3" />
+    <Content Include="Resources\Pronunciations\confined.mp3" />
+    <Content Include="Resources\Pronunciations\consciousness.mp3" />
+    <Content Include="Resources\Pronunciations\consensus.mp3" />
+    <Content Include="Resources\Pronunciations\considered.mp3" />
+    <Content Include="Resources\Pronunciations\constituent.mp3" />
+    <Content Include="Resources\Pronunciations\constitutional.mp3" />
+    <Content Include="Resources\Pronunciations\contingency.mp3" />
+    <Content Include="Resources\Pronunciations\coordination.mp3" />
+    <Content Include="Resources\Pronunciations\correlation.mp3" />
+    <Content Include="Resources\Pronunciations\cosmic.mp3" />
+    <Content Include="Resources\Pronunciations\creativity.mp3" />
+    <Content Include="Resources\Pronunciations\critic.mp3" />
+    <Content Include="Resources\Pronunciations\critics.mp3" />
+    <Content Include="Resources\Pronunciations\critique.mp3" />
+    <Content Include="Resources\Pronunciations\crucial.mp3" />
+    <Content Include="Resources\Pronunciations\cue.mp3" />
+    <Content Include="Resources\Pronunciations\culture.mp3" />
+    <Content Include="Resources\Pronunciations\currently.mp3" />
+    <Content Include="Resources\Pronunciations\debatable.mp3" />
+    <Content Include="Resources\Pronunciations\deficiency.mp3" />
+    <Content Include="Resources\Pronunciations\deficient.mp3" />
+    <Content Include="Resources\Pronunciations\democracy.mp3" />
+    <Content Include="Resources\Pronunciations\democratic.mp3" />
+    <Content Include="Resources\Pronunciations\densely.mp3" />
+    <Content Include="Resources\Pronunciations\depends.mp3" />
+    <Content Include="Resources\Pronunciations\developed.mp3" />
+    <Content Include="Resources\Pronunciations\development.mp3" />
+    <Content Include="Resources\Pronunciations\devoid.mp3" />
+    <Content Include="Resources\Pronunciations\dilemma.mp3" />
+    <Content Include="Resources\Pronunciations\dilemmas.mp3" />
+    <Content Include="Resources\Pronunciations\dimension.mp3" />
+    <Content Include="Resources\Pronunciations\dinosaur.mp3" />
+    <Content Include="Resources\Pronunciations\disagree.mp3" />
+    <Content Include="Resources\Pronunciations\disclose.mp3" />
+    <Content Include="Resources\Pronunciations\domestic.mp3" />
+    <Content Include="Resources\Pronunciations\drainage.mp3" />
+    <Content Include="Resources\Pronunciations\drive.mp3" />
+    <Content Include="Resources\Pronunciations\driven.mp3" />
+    <Content Include="Resources\Pronunciations\dynamic.mp3" />
+    <Content Include="Resources\Pronunciations\dysfunction.mp3" />
+    <Content Include="Resources\Pronunciations\ecosystem.mp3" />
+    <Content Include="Resources\Pronunciations\effectively.mp3" />
+    <Content Include="Resources\Pronunciations\efficiency.mp3" />
+    <Content Include="Resources\Pronunciations\electronic.mp3" />
+    <Content Include="Resources\Pronunciations\embarrassed.mp3" />
+    <Content Include="Resources\Pronunciations\embarrassment.mp3" />
+    <Content Include="Resources\Pronunciations\emergencies.mp3" />
+    <Content Include="Resources\Pronunciations\emergency.mp3" />
+    <Content Include="Resources\Pronunciations\emphasis.mp3" />
+    <Content Include="Resources\Pronunciations\employee.mp3" />
+    <Content Include="Resources\Pronunciations\employees.mp3" />
+    <Content Include="Resources\Pronunciations\employment.mp3" />
+    <Content Include="Resources\Pronunciations\encounter.mp3" />
+    <Content Include="Resources\Pronunciations\encourage.mp3" />
+    <Content Include="Resources\Pronunciations\endure.mp3" />
+    <Content Include="Resources\Pronunciations\engineering.mp3" />
+    <Content Include="Resources\Pronunciations\enhance.mp3" />
+    <Content Include="Resources\Pronunciations\entertainment.mp3" />
+    <Content Include="Resources\Pronunciations\enthusiasm.mp3" />
+    <Content Include="Resources\Pronunciations\enthusiastic.mp3" />
+    <Content Include="Resources\Pronunciations\environment.mp3" />
+    <Content Include="Resources\Pronunciations\environmentalist.mp3" />
+    <Content Include="Resources\Pronunciations\equilibrium.mp3" />
+    <Content Include="Resources\Pronunciations\equipment.mp3" />
+    <Content Include="Resources\Pronunciations\ethical.mp3" />
+    <Content Include="Resources\Pronunciations\ethnic.mp3" />
+    <Content Include="Resources\Pronunciations\european.mp3" />
+    <Content Include="Resources\Pronunciations\evaluate.mp3" />
+    <Content Include="Resources\Pronunciations\evolved.mp3" />
+    <Content Include="Resources\Pronunciations\exhibit.mp3" />
+    <Content Include="Resources\Pronunciations\expenditure.mp3" />
+    <Content Include="Resources\Pronunciations\experienced.mp3" />
+    <Content Include="Resources\Pronunciations\expertise.mp3" />
+    <Content Include="Resources\Pronunciations\fahrenheit.mp3" />
+    <Content Include="Resources\Pronunciations\favorite.mp3" />
+    <Content Include="Resources\Pronunciations\February.mp3" />
+    <Content Include="Resources\Pronunciations\federal.mp3" />
+    <Content Include="Resources\Pronunciations\figure.mp3" />
+    <Content Include="Resources\Pronunciations\financial.mp3" />
+    <Content Include="Resources\Pronunciations\five.mp3" />
+    <Content Include="Resources\Pronunciations\focus.mp3" />
+    <Content Include="Resources\Pronunciations\foreign.mp3" />
+    <Content Include="Resources\Pronunciations\forerunner.mp3" />
+    <Content Include="Resources\Pronunciations\formalism.mp3" />
+    <Content Include="Resources\Pronunciations\fortunately.mp3" />
+    <Content Include="Resources\Pronunciations\forty.mp3" />
+    <Content Include="Resources\Pronunciations\foundation.mp3" />
+    <Content Include="Resources\Pronunciations\friends.mp3" />
+    <Content Include="Resources\Pronunciations\frightening.mp3" />
+    <Content Include="Resources\Pronunciations\fulfil.mp3" />
+    <Content Include="Resources\Pronunciations\fund.mp3" />
+    <Content Include="Resources\Pronunciations\further.mp3" />
+    <Content Include="Resources\Pronunciations\garage.mp3" />
+    <Content Include="Resources\Pronunciations\geographical.mp3" />
+    <Content Include="Resources\Pronunciations\globally.mp3" />
+    <Content Include="Resources\Pronunciations\graphical.mp3" />
+    <Content Include="Resources\Pronunciations\grew.mp3" />
+    <Content Include="Resources\Pronunciations\guidance.mp3" />
+    <Content Include="Resources\Pronunciations\hallucination.mp3" />
+    <Content Include="Resources\Pronunciations\harvest.mp3" />
+    <Content Include="Resources\Pronunciations\healthy.mp3" />
+    <Content Include="Resources\Pronunciations\heritage.mp3" />
+    <Content Include="Resources\Pronunciations\hierarchical.mp3" />
+    <Content Include="Resources\Pronunciations\hiking.mp3" />
+    <Content Include="Resources\Pronunciations\holistic.mp3" />
+    <Content Include="Resources\Pronunciations\home.mp3" />
+    <Content Include="Resources\Pronunciations\hospital.mp3" />
+    <Content Include="Resources\Pronunciations\household.mp3" />
+    <Content Include="Resources\Pronunciations\human.mp3" />
+    <Content Include="Resources\Pronunciations\hydraulic.mp3" />
+    <Content Include="Resources\Pronunciations\hypothesis.mp3" />
+    <Content Include="Resources\Pronunciations\I.mp3" />
+    <Content Include="Resources\Pronunciations\identity.mp3" />
+    <Content Include="Resources\Pronunciations\ignore.mp3" />
+    <Content Include="Resources\Pronunciations\illiterate.mp3" />
+    <Content Include="Resources\Pronunciations\image.mp3" />
+    <Content Include="Resources\Pronunciations\immediately.mp3" />
+    <Content Include="Resources\Pronunciations\immune.mp3" />
+    <Content Include="Resources\Pronunciations\incentive.mp3" />
+    <Content Include="Resources\Pronunciations\increasingly.mp3" />
+    <Content Include="Resources\Pronunciations\india.mp3" />
+    <Content Include="Resources\Pronunciations\inequality.mp3" />
+    <Content Include="Resources\Pronunciations\inextricably.mp3" />
+    <Content Include="Resources\Pronunciations\infrastructure.mp3" />
+    <Content Include="Resources\Pronunciations\initially.mp3" />
+    <Content Include="Resources\Pronunciations\initiative.mp3" />
+    <Content Include="Resources\Pronunciations\injury.mp3" />
+    <Content Include="Resources\Pronunciations\innovation.mp3" />
+    <Content Include="Resources\Pronunciations\innumerable.mp3" />
+    <Content Include="Resources\Pronunciations\insight.mp3" />
+    <Content Include="Resources\Pronunciations\instruction.mp3" />
+    <Content Include="Resources\Pronunciations\internal .mp3" />
+    <Content Include="Resources\Pronunciations\intervention.mp3" />
+    <Content Include="Resources\Pronunciations\intrinsic.mp3" />
+    <Content Include="Resources\Pronunciations\invariably.mp3" />
+    <Content Include="Resources\Pronunciations\involvement.mp3" />
+    <Content Include="Resources\Pronunciations\i`m.mp3" />
+    <Content Include="Resources\Pronunciations\jewelry.mp3" />
+    <Content Include="Resources\Pronunciations\laboratory.mp3" />
+    <Content Include="Resources\Pronunciations\laugh.mp3" />
+    <Content Include="Resources\Pronunciations\launch.mp3" />
+    <Content Include="Resources\Pronunciations\launching.mp3" />
+    <Content Include="Resources\Pronunciations\Legal.mp3" />
+    <Content Include="Resources\Pronunciations\lethargy.mp3" />
+    <Content Include="Resources\Pronunciations\likelihood.mp3" />
+    <Content Include="Resources\Pronunciations\limited.mp3" />
+    <Content Include="Resources\Pronunciations\linguistic.mp3" />
+    <Content Include="Resources\Pronunciations\literature.mp3" />
+    <Content Include="Resources\Pronunciations\live.mp3" />
+    <Content Include="Resources\Pronunciations\longitudinal.mp3" />
+    <Content Include="Resources\Pronunciations\low.mp3" />
+    <Content Include="Resources\Pronunciations\majority.mp3" />
+    <Content Include="Resources\Pronunciations\managing.mp3" />
+    <Content Include="Resources\Pronunciations\materials.mp3" />
+    <Content Include="Resources\Pronunciations\mathematical.mp3" />
+    <Content Include="Resources\Pronunciations\measurement.mp3" />
+    <Content Include="Resources\Pronunciations\medicine.mp3" />
+    <Content Include="Resources\Pronunciations\medieval.mp3" />
+    <Content Include="Resources\Pronunciations\memorise.mp3" />
+    <Content Include="Resources\Pronunciations\merchandise.mp3" />
+    <Content Include="Resources\Pronunciations\meteorology.mp3" />
+    <Content Include="Resources\Pronunciations\methane.mp3" />
+    <Content Include="Resources\Pronunciations\methodology.mp3" />
+    <Content Include="Resources\Pronunciations\mexico.mp3" />
+    <Content Include="Resources\Pronunciations\mining.mp3" />
+    <Content Include="Resources\Pronunciations\miscellaneous.mp3" />
+    <Content Include="Resources\Pronunciations\mitigation.mp3" />
+    <Content Include="Resources\Pronunciations\mode.mp3" />
+    <Content Include="Resources\Pronunciations\moisture.mp3" />
+    <Content Include="Resources\Pronunciations\mole.mp3" />
+    <Content Include="Resources\Pronunciations\mom.mp3" />
+    <Content Include="Resources\Pronunciations\monolithic.mp3" />
+    <Content Include="Resources\Pronunciations\month.mp3" />
+    <Content Include="Resources\Pronunciations\moon.mp3" />
+    <Content Include="Resources\Pronunciations\mother.mp3" />
+    <Content Include="Resources\Pronunciations\mountain.mp3" />
+    <Content Include="Resources\Pronunciations\mountains.mp3" />
+    <Content Include="Resources\Pronunciations\museum.mp3" />
+    <Content Include="Resources\Pronunciations\mutually.mp3" />
+    <Content Include="Resources\Pronunciations\mysterious.mp3" />
+    <Content Include="Resources\Pronunciations\narrow.mp3" />
+    <Content Include="Resources\Pronunciations\navigation.mp3" />
+    <Content Include="Resources\Pronunciations\nearby.mp3" />
+    <Content Include="Resources\Pronunciations\necessarily.mp3" />
+    <Content Include="Resources\Pronunciations\negotiate.mp3" />
+    <Content Include="Resources\Pronunciations\nitrogen.mp3" />
+    <Content Include="Resources\Pronunciations\o-clock.mp3" />
+    <Content Include="Resources\Pronunciations\obligation.mp3" />
+    <Content Include="Resources\Pronunciations\obligatory.mp3" />
+    <Content Include="Resources\Pronunciations\obtain.mp3" />
+    <Content Include="Resources\Pronunciations\occur.mp3" />
+    <Content Include="Resources\Pronunciations\of.mp3" />
+    <Content Include="Resources\Pronunciations\offence.mp3" />
+    <Content Include="Resources\Pronunciations\okay.mp3" />
+    <Content Include="Resources\Pronunciations\omit.mp3" />
+    <Content Include="Resources\Pronunciations\ones.mp3" />
+    <Content Include="Resources\Pronunciations\onto.mp3" />
+    <Content Include="Resources\Pronunciations\optimistic.mp3" />
+    <Content Include="Resources\Pronunciations\oration.mp3" />
+    <Content Include="Resources\Pronunciations\other.mp3" />
+    <Content Include="Resources\Pronunciations\our.mp3" />
+    <Content Include="Resources\Pronunciations\oversight.mp3" />
+    <Content Include="Resources\Pronunciations\overwhelming.mp3" />
+    <Content Include="Resources\Pronunciations\pace.mp3" />
+    <Content Include="Resources\Pronunciations\paradigm.mp3" />
+    <Content Include="Resources\Pronunciations\parallel.mp3" />
+    <Content Include="Resources\Pronunciations\paramount.mp3" />
+    <Content Include="Resources\Pronunciations\patented.mp3" />
+    <Content Include="Resources\Pronunciations\peace.mp3" />
+    <Content Include="Resources\Pronunciations\peasant.mp3" />
+    <Content Include="Resources\Pronunciations\perceived.mp3" />
+    <Content Include="Resources\Pronunciations\personnel.mp3" />
+    <Content Include="Resources\Pronunciations\phase.mp3" />
+    <Content Include="Resources\Pronunciations\phenomenon.mp3" />
+    <Content Include="Resources\Pronunciations\philosophy.mp3" />
+    <Content Include="Resources\Pronunciations\physics.mp3" />
+    <Content Include="Resources\Pronunciations\pioneering.mp3" />
+    <Content Include="Resources\Pronunciations\plausible.mp3" />
+    <Content Include="Resources\Pronunciations\plenty.mp3" />
+    <Content Include="Resources\Pronunciations\pneumonia.mp3" />
+    <Content Include="Resources\Pronunciations\poisonous.mp3" />
+    <Content Include="Resources\Pronunciations\police.mp3" />
+    <Content Include="Resources\Pronunciations\policy.mp3" />
+    <Content Include="Resources\Pronunciations\poor.mp3" />
+    <Content Include="Resources\Pronunciations\portrait.mp3" />
+    <Content Include="Resources\Pronunciations\postgraduate.mp3" />
+    <Content Include="Resources\Pronunciations\postgraduates.mp3" />
+    <Content Include="Resources\Pronunciations\practice.mp3" />
+    <Content Include="Resources\Pronunciations\pre-existing.mp3" />
+    <Content Include="Resources\Pronunciations\precedence.mp3" />
+    <Content Include="Resources\Pronunciations\predicament.mp3" />
+    <Content Include="Resources\Pronunciations\preferred.mp3" />
+    <Content Include="Resources\Pronunciations\premises.mp3" />
+    <Content Include="Resources\Pronunciations\prettier.mp3" />
+    <Content Include="Resources\Pronunciations\prime.mp3" />
+    <Content Include="Resources\Pronunciations\principles.mp3" />
+    <Content Include="Resources\Pronunciations\probability.mp3" />
+    <Content Include="Resources\Pronunciations\profound.mp3" />
+    <Content Include="Resources\Pronunciations\prominent.mp3" />
+    <Content Include="Resources\Pronunciations\promote.mp3" />
+    <Content Include="Resources\Pronunciations\prone.mp3" />
+    <Content Include="Resources\Pronunciations\propose.mp3" />
+    <Content Include="Resources\Pronunciations\proposed.mp3" />
+    <Content Include="Resources\Pronunciations\prospect.mp3" />
+    <Content Include="Resources\Pronunciations\prosperity.mp3" />
+    <Content Include="Resources\Pronunciations\provision.mp3" />
+    <Content Include="Resources\Pronunciations\psychology.mp3" />
+    <Content Include="Resources\Pronunciations\purchasing.mp3" />
+    <Content Include="Resources\Pronunciations\purpose.mp3" />
+    <Content Include="Resources\Pronunciations\puzzle.mp3" />
+    <Content Include="Resources\Pronunciations\qualitatively.mp3" />
+    <Content Include="Resources\Pronunciations\rain.mp3" />
+    <Content Include="Resources\Pronunciations\rational.mp3" />
+    <Content Include="Resources\Pronunciations\rationalize.mp3" />
+    <Content Include="Resources\Pronunciations\reasoned.mp3" />
+    <Content Include="Resources\Pronunciations\reciprocal.mp3" />
+    <Content Include="Resources\Pronunciations\recognized.mp3" />
+    <Content Include="Resources\Pronunciations\recommended.mp3" />
+    <Content Include="Resources\Pronunciations\recruit.mp3" />
+    <Content Include="Resources\Pronunciations\reflective.mp3" />
+    <Content Include="Resources\Pronunciations\remarkably.mp3" />
+    <Content Include="Resources\Pronunciations\renewal.mp3" />
+    <Content Include="Resources\Pronunciations\renowned.mp3" />
+    <Content Include="Resources\Pronunciations\repair.mp3" />
+    <Content Include="Resources\Pronunciations\researcher.mp3" />
+    <Content Include="Resources\Pronunciations\researchers.mp3" />
+    <Content Include="Resources\Pronunciations\resemblance.mp3" />
+    <Content Include="Resources\Pronunciations\resemble.mp3" />
+    <Content Include="Resources\Pronunciations\residencies.mp3" />
+    <Content Include="Resources\Pronunciations\residency.mp3" />
+    <Content Include="Resources\Pronunciations\resource.mp3" />
+    <Content Include="Resources\Pronunciations\rise.mp3" />
+    <Content Include="Resources\Pronunciations\risky.mp3" />
+    <Content Include="Resources\Pronunciations\roughly.mp3" />
+    <Content Include="Resources\Pronunciations\ruining.mp3" />
+    <Content Include="Resources\Pronunciations\ruling.mp3" />
+    <Content Include="Resources\Pronunciations\sabbatical.mp3" />
+    <Content Include="Resources\Pronunciations\satellite.mp3" />
+    <Content Include="Resources\Pronunciations\scarce.mp3" />
+    <Content Include="Resources\Pronunciations\scholarly.mp3" />
+    <Content Include="Resources\Pronunciations\scientific.mp3" />
+    <Content Include="Resources\Pronunciations\scrutiny.mp3" />
+    <Content Include="Resources\Pronunciations\sequentially.mp3" />
+    <Content Include="Resources\Pronunciations\serve.mp3" />
+    <Content Include="Resources\Pronunciations\severe.mp3" />
+    <Content Include="Resources\Pronunciations\significant.mp3" />
+    <Content Include="Resources\Pronunciations\simultaneously.mp3" />
+    <Content Include="Resources\Pronunciations\societies.mp3" />
+    <Content Include="Resources\Pronunciations\society.mp3" />
+    <Content Include="Resources\Pronunciations\sophisticated.mp3" />
+    <Content Include="Resources\Pronunciations\source.mp3" />
+    <Content Include="Resources\Pronunciations\sources.mp3" />
+    <Content Include="Resources\Pronunciations\South.mp3" />
+    <Content Include="Resources\Pronunciations\sovereign.mp3" />
+    <Content Include="Resources\Pronunciations\specialized.mp3" />
+    <Content Include="Resources\Pronunciations\specific.mp3" />
+    <Content Include="Resources\Pronunciations\spectrum.mp3" />
+    <Content Include="Resources\Pronunciations\sphere.mp3" />
+    <Content Include="Resources\Pronunciations\sponsor.mp3" />
+    <Content Include="Resources\Pronunciations\stability.mp3" />
+    <Content Include="Resources\Pronunciations\statement.mp3" />
+    <Content Include="Resources\Pronunciations\statistical.mp3" />
+    <Content Include="Resources\Pronunciations\statistics.mp3" />
+    <Content Include="Resources\Pronunciations\stereotype.mp3" />
+    <Content Include="Resources\Pronunciations\straightforward.mp3" />
+    <Content Include="Resources\Pronunciations\stream.mp3" />
+    <Content Include="Resources\Pronunciations\strength.mp3" />
+    <Content Include="Resources\Pronunciations\stubborn.mp3" />
+    <Content Include="Resources\Pronunciations\submerge.mp3" />
+    <Content Include="Resources\Pronunciations\substantial.mp3" />
+    <Content Include="Resources\Pronunciations\succeed.mp3" />
+    <Content Include="Resources\Pronunciations\succeeded.mp3" />
+    <Content Include="Resources\Pronunciations\successfully.mp3" />
+    <Content Include="Resources\Pronunciations\sufficient.mp3" />
+    <Content Include="Resources\Pronunciations\suitable.mp3" />
+    <Content Include="Resources\Pronunciations\summary.mp3" />
+    <Content Include="Resources\Pronunciations\surrounding.mp3" />
+    <Content Include="Resources\Pronunciations\survey.mp3" />
+    <Content Include="Resources\Pronunciations\susceptible.mp3" />
+    <Content Include="Resources\Pronunciations\sustainability.mp3" />
+    <Content Include="Resources\Pronunciations\sustainable.mp3" />
+    <Content Include="Resources\Pronunciations\symbiotic.mp3" />
+    <Content Include="Resources\Pronunciations\symptom.mp3" />
+    <Content Include="Resources\Pronunciations\synopsis.mp3" />
+    <Content Include="Resources\Pronunciations\textbook.mp3" />
+    <Content Include="Resources\Pronunciations\the.mp3" />
+    <Content Include="Resources\Pronunciations\their.mp3" />
+    <Content Include="Resources\Pronunciations\thematic.mp3" />
+    <Content Include="Resources\Pronunciations\theme.mp3" />
+    <Content Include="Resources\Pronunciations\theoretical.mp3" />
+    <Content Include="Resources\Pronunciations\therapist.mp3" />
+    <Content Include="Resources\Pronunciations\thesis.mp3" />
+    <Content Include="Resources\Pronunciations\think.mp3" />
+    <Content Include="Resources\Pronunciations\thought.mp3" />
+    <Content Include="Resources\Pronunciations\threat.mp3" />
+    <Content Include="Resources\Pronunciations\Throughout.mp3" />
+    <Content Include="Resources\Pronunciations\tissues.mp3" />
+    <Content Include="Resources\Pronunciations\tomorrow.mp3" />
+    <Content Include="Resources\Pronunciations\tourism.mp3" />
+    <Content Include="Resources\Pronunciations\towels.mp3" />
+    <Content Include="Resources\Pronunciations\trait.mp3" />
+    <Content Include="Resources\Pronunciations\transgender.mp3" />
+    <Content Include="Resources\Pronunciations\transmission.mp3" />
+    <Content Include="Resources\Pronunciations\traveling.mp3" />
+    <Content Include="Resources\Pronunciations\treatment.mp3" />
+    <Content Include="Resources\Pronunciations\treatments.mp3" />
+    <Content Include="Resources\Pronunciations\trends.mp3" />
+    <Content Include="Resources\Pronunciations\tsunami.mp3" />
+    <Content Include="Resources\Pronunciations\turnover.mp3" />
+    <Content Include="Resources\Pronunciations\typical.mp3" />
+    <Content Include="Resources\Pronunciations\underlying.mp3" />
+    <Content Include="Resources\Pronunciations\unexpected.mp3" />
+    <Content Include="Resources\Pronunciations\uninhabitable.mp3" />
+    <Content Include="Resources\Pronunciations\unintended.mp3" />
+    <Content Include="Resources\Pronunciations\unnecessary.mp3" />
+    <Content Include="Resources\Pronunciations\unpleasant.mp3" />
+    <Content Include="Resources\Pronunciations\used.mp3" />
+    <Content Include="Resources\Pronunciations\valuable.mp3" />
+    <Content Include="Resources\Pronunciations\variable.mp3" />
+    <Content Include="Resources\Pronunciations\varieties.mp3" />
+    <Content Include="Resources\Pronunciations\variety.mp3" />
+    <Content Include="Resources\Pronunciations\various.mp3" />
+    <Content Include="Resources\Pronunciations\vascular.mp3" />
+    <Content Include="Resources\Pronunciations\vehicle.mp3" />
+    <Content Include="Resources\Pronunciations\violently.mp3" />
+    <Content Include="Resources\Pronunciations\virtue.mp3" />
+    <Content Include="Resources\Pronunciations\warming.mp3" />
+    <Content Include="Resources\Pronunciations\welfare.mp3" />
+    <Content Include="Resources\Pronunciations\while.mp3" />
+    <Content Include="Resources\Pronunciations\whole.mp3" />
+    <Content Include="Resources\Pronunciations\Will.mp3" />
+    <Content Include="Resources\Pronunciations\withdraw.mp3" />
+    <Content Include="Resources\Pronunciations\within.mp3" />
+    <Content Include="Resources\Pronunciations\word.mp3" />
+    <Content Include="Resources\Pronunciations\world.mp3" />
+    <Content Include="Resources\Pronunciations\`s.mp3" />
+    <Resource Include="there_is_no_cake.ico" />
+    <Resource Include="Images\its_a_lie.png" />
+    <Resource Include="Images\Icons\there_is_no_cake.ico" />
+    <Resource Include="Images\Icons\br.ico" />
+    <Resource Include="Images\Icons\br_gray.ico" />
+    <Resource Include="Images\Icons\interrogation.ico" />
+    <Resource Include="Images\Icons\interrogation_gray.ico" />
+    <Resource Include="Images\Icons\list.ico" />
+    <Resource Include="Images\Icons\remove_v2.ico" />
+    <Resource Include="Images\Icons\save.ico" />
+    <Resource Include="Images\Icons\switch_off.ico" />
+    <Resource Include="Images\Icons\switch_on.ico" />
+    <Resource Include="Images\Icons\add.ico" />
+    <Resource Include="Images\Icons\add_blue.ico" />
+    <Resource Include="Images\Icons\remove.ico" />
+    <Resource Include="Images\Icons\edit_save.ico" />
+    <Resource Include="Images\Icons\add-20.ico" />
+    <Resource Include="Images\Icons\delete.ico" />
+    <Resource Include="Images\Icons\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

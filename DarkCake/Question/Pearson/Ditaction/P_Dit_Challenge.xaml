@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="AussieCake.Question.P_Dit_Challenge"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FontSize="14">
+
+    <Grid Name="userControlGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Background="#777">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Label Name="lblType" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" />
+            <Label Name="lblScoreWeek" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Background="#edf2f7" />
+            <Label Name="lblScoreMonth" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Background="#edf2f7" />
+            <Label Name="lblScoreAll" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" Background="#edf2f7" />
+            <Label Name="lblTries" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" />
+            <Label Name="lblChanceShow" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" />
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="#373737">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <Border VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Background="#777"
+                    Grid.Column="0" Grid.Row="0">
+                <TextBox Name="txtAnswer" IsReadOnly="True" Width="600" FontSize="16"
+                         Text="Waiting for answer..." />
+            </Border>
+            <Label Name="lblPercent" Grid.Column="0" Grid.Row="1" FontSize="20"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <StackPanel Name="stkDiff" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center"  Background="#777"
+                        HorizontalAlignment="Center" Orientation="Horizontal" />
+            <Border VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Background="#777"
+                    Grid.Column="0" Grid.Row="3">
+                <TextBox Name="txtAttempt" Width="600" FontSize="16" PreviewKeyDown="TxtAttempt_PreviewKeyDown"  />
+            </Border>
+        </Grid>
+
+        <DockPanel Grid.Row="2" Grid.Column="0"  Background="#777">
+
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                
+                <Button Name="btnRemoveAttempt" Content="Remove Attempt" Width="125" IsEnabled="False"                    
+                    Margin="2, 2, 0, 2" Click="BtnRemoveAttempt_Click"/>                
+                
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+
+                <CheckBox x:Name="cb_ASQ" Content="ASQ" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
+                <CheckBox x:Name="cb_RS" Content="RS" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
+                <CheckBox x:Name="cb_WFD" Content="WFD" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
+
+                <Button Name="btnStartSpeech" Content="Start Speech" Width="125"
+                    Margin="0, 2, 8, 2" Click="BtnStartSpeech_Click" />
+
+                <Button Name="btnVerify"  Content="Verify" Width="125" IsEnabled="False"
+                    Margin="0, 2, 8, 2" Click="BtnVerify_Click" />
+
+                <Button Name="btnNext" Content="Next" Width="125" IsEnabled="False"
+                    Margin="0, 2, 2, 2" Click="BtnNext_Click"/>
+
+            </StackPanel>
+
+        </DockPanel>
+
+    </Grid>
+</UserControl>
+
