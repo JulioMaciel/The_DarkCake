@@ -1,3 +1,3 @@
 # The_DarkCake
 
-![image](https://user-images.githubusercontent.com/12513988/174430140-89ee0a37-8b61-4a90-bb2e-4fefc53a496d.png)
+![image](https://user-images.githubusercontent.com/12513988/174473755-7d2729d0-156d-4188-ba70-c6dac8c139cf.png)
