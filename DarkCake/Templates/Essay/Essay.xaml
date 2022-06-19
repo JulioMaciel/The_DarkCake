@@ -7,7 +7,7 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*" />
-            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.33*" />
             <ColumnDefinition />
             <ColumnDefinition Width="0.75*" />
             <ColumnDefinition Width="3*" />
@@ -26,10 +26,9 @@
                 Click="Filter_Click" />
 
         <Label Grid.Row="0" Grid.Column="3" Content="Difficulty" VerticalAlignment="Center" />
-        <Slider Name="slider" Grid.Row="0" Grid.Column="4" Maximum="100" TickPlacement="BottomRight" 
+        <Slider Name="slider" Grid.Row="0" Grid.Column="4" Minimum="20" Maximum="100" TickPlacement="BottomRight" 
                 VerticalAlignment="Center" IsMoveToPointEnabled="True" Margin="1,0,1,0" 
-                TickFrequency="20" IsSnapToTickEnabled="True" 
-                ValueChanged="Slider_ValueChanged" />
+                TickFrequency="20" IsSnapToTickEnabled="True" />
         <Button Name="btnStart" Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" Margin="2,0,2,0" 
                 Content="Start" Click="BtnStart_Click"/>
         <Button Name="btnStartInit" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" Margin="2,0,2,0" 

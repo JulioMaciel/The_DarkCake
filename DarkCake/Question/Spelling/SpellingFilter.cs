@@ -59,10 +59,10 @@ namespace AussieCake.Question
 
             stk_items.Children.Clear();
 
-            foreach (SpellVM Spell in Filtered_quests.Take(30))
+            foreach (SpellVM Spell in Filtered_quests.Take(100))
                 SpellWpfController.AddIntoItems(stk_items, Spell, false);
 
-            Footer.Log("Showing " + Filtered_quests.Take(30).Count() + " spellings of a total of " + Filtered_quests.Count() + 
+            Footer.Log("Showing " + Filtered_quests.Take(100).Count() + " spellings of a total of " + Filtered_quests.Count() + 
                        ". Loaded in " + watcher.Elapsed.TotalSeconds + " seconds.");
         }
 

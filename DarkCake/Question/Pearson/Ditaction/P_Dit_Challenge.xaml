@@ -51,7 +51,7 @@
 
             <Border VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Background="#777"
                     Grid.Column="0" Grid.Row="0">
-                <TextBox Name="txtAnswer" IsReadOnly="True" Width="600" FontSize="16"
+                <TextBox Name="txtAnswer" IsReadOnly="True" Width="700" FontSize="16"
                          Text="Waiting for answer..." />
             </Border>
             <Label Name="lblPercent" Grid.Column="0" Grid.Row="1" FontSize="20"
@@ -60,7 +60,7 @@
                         HorizontalAlignment="Center" Orientation="Horizontal" />
             <Border VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Background="#777"
                     Grid.Column="0" Grid.Row="3">
-                <TextBox Name="txtAttempt" Width="600" FontSize="16" PreviewKeyDown="TxtAttempt_PreviewKeyDown"  />
+                <TextBox Name="txtAttempt" Width="700" FontSize="16" PreviewKeyDown="TxtAttempt_PreviewKeyDown"  />
             </Border>
         </Grid>
 

@@ -10,10 +10,10 @@ namespace AussieCake.Templates
         public static List<IQuest> Words = new List<IQuest>()
         {
             new SumRetellVM(0, "One", true),
-            new SumRetellVM(1, "of", true),
+            new SumRetellVM(1, "of"),
             new SumRetellVM(2, "the"),
-            new SumRetellVM(3, "most"),
-            new SumRetellVM(4, "talked"),
+            new SumRetellVM(3, "most", true),
+            new SumRetellVM(4, "talked", true),
             new SumRetellVM(5, "about"),
             new SumRetellVM(6, "issues"),
             new SumRetellVM(7, "today"),

@@ -68,10 +68,10 @@ namespace AussieCake.Question
 
             stk_items.Children.Clear();
 
-            foreach (PronVM Pron in Filtered_quests.OrderBy(q => q.Text).Take(30))
+            foreach (PronVM Pron in Filtered_quests.OrderBy(q => q.Text).Take(100))
                 PronWpfController.AddIntoItems(stk_items, Pron, false);
 
-            Footer.Log("Showing " + Filtered_quests.Take(30).Count() + " Pronunciation of a total of " + Filtered_quests.Count() + 
+            Footer.Log("Showing " + Filtered_quests.Take(100).Count() + " Pronunciation of a total of " + Filtered_quests.Count() + 
                        ". Loaded in " + watcher.Elapsed.TotalSeconds + " seconds.");
         }
 

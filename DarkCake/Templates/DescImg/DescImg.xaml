@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="AussieCake.Templates.DescImg"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      FontSize="14" Loaded="UserControl_Loaded">
+      FontSize="14">
 
     <Grid Name="userControlGrid" Background="#777777">
 
@@ -27,12 +27,11 @@
                 Click="Filter_Click" />
 
         <Label Grid.Row="0" Grid.Column="3" Content="Difficulty" VerticalAlignment="Center" />
-        <Slider Name="slider" Grid.Row="0" Grid.Column="4" Maximum="100" TickPlacement="BottomRight" 
+        <Slider Name="slider" Grid.Row="0" Grid.Column="4" Minimum="20" Maximum="100" TickPlacement="BottomRight" 
                 VerticalAlignment="Center"  IsMoveToPointEnabled="True" Margin="1,0,1,0" 
-                TickFrequency="20" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"
-                IsEnabled="True" />
+                TickFrequency="20" IsSnapToTickEnabled="True" IsEnabled="True" />
         <Button Name="btnStart" Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" Margin="2,0,2,0" 
-                Click="BtnStart_Click"/>
+                Content="Start" Click="BtnStart_Click"/>
         <Button Name="btnStartInit" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" Margin="2,0,2,0" 
                 Content="Init" Click="BtnStart_ClickInit"/>
         <Button Name="btnStartStressed" Grid.Row="0" Grid.Column="7" VerticalAlignment="Center" Margin="2,0,2,0" 

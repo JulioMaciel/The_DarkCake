@@ -180,7 +180,7 @@ namespace AussieCake.Context
 
         protected static bool InsertVocabulary(VocModel Voc)
         {
-            string query = string.Format(InsertSQL + "'{1}', '{2}', {3}, '{4}', '{5}', {6})",
+            string query = string.Format(InsertSQL + "'{1}', '{2}', {3}, '{4}', '{5}')",
                                         Model.Voc.ToDesc(),
                                         Voc.Text, Voc.Answer,
                                         Null, Null, Voc.IsActive);
@@ -196,7 +196,7 @@ namespace AussieCake.Context
 
         protected static bool InsertPronunciation(PronModel Pron)
         {
-            string query = string.Format(InsertSQL + "'{1}', '{2}', {3}, '{4}')",
+            string query = string.Format(InsertSQL + "'{1}', '{2}', {3})",
                                         Model.Pron.ToDesc(),
                                         Pron.Text, Pron.Phonemes,
                                         Pron.IsActive);
@@ -212,7 +212,7 @@ namespace AussieCake.Context
 
         protected static bool InsertSpelling(SpellModel Spell)
         {
-            string query = string.Format(InsertSQL + "'{1}', '{2}', {3})",
+            string query = string.Format(InsertSQL + "'{1}', '{2}')",
                                         Model.Spell.ToDesc(),
                                         Spell.Text,
                                         Spell.IsActive);

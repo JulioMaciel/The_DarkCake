@@ -86,10 +86,10 @@ namespace AussieCake.Question
 
             stk_items.Children.Clear();
 
-            foreach (VocVM Voc in Filtered_quests.Take(30))
+            foreach (VocVM Voc in Filtered_quests.Take(100))
                 VocWpfController.AddIntoItems(stk_items, Voc, false);
 
-            Footer.Log("Showing " + Filtered_quests.Take(30).Count() + " Vocabulary of a total of " + Filtered_quests.Count() + 
+            Footer.Log("Showing " + Filtered_quests.Take(100).Count() + " Vocabulary of a total of " + Filtered_quests.Count() + 
                        ". Loaded in " + watcher.Elapsed.TotalSeconds + " seconds.");
         }
 

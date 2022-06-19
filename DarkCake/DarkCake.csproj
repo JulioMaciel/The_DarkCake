@@ -1324,7 +1324,6 @@
     <Content Include="Resources\Pronunciations\within.mp3" />
     <Content Include="Resources\Pronunciations\word.mp3" />
     <Content Include="Resources\Pronunciations\world.mp3" />
-    <Content Include="Resources\Pronunciations\`s.mp3" />
     <Resource Include="there_is_no_cake.ico" />
     <Resource Include="Images\its_a_lie.png" />
     <Resource Include="Images\Icons\there_is_no_cake.ico" />

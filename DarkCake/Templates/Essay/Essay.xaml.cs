@@ -48,14 +48,9 @@ namespace AussieCake.Templates
             btnFinish.IsEnabled = false;
         }
 
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            btnStart.Content = "Start " + e.NewValue + "%";
-        }
-
         private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
-            CellList = TemplateWPF.BuildTemplate(TemplateEssay.Words, 100 - slider.Value, StkTemplate);
+            CellList = TemplateWPF.BuildTemplate(TemplateEssay.Words, slider.Value, StkTemplate);
 
             Start();
         }

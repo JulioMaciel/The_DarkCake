@@ -2,15 +2,13 @@
 using AussieCake.Util.WPF;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace AussieCake.Templates
 {
     /// <summary>
-    /// Interaction logic for Essay.xaml
+    /// Interaction logic for SumRetell.xaml
     /// </summary>
     public partial class SumRetell : UserControl
     {
@@ -26,12 +24,6 @@ namespace AussieCake.Templates
 
             CellList = TemplateWPF.BuildTemplate(TemplateSumRetell.Words, 0, StkTemplate);
             TemplateWPF.ShowScoredTemplate(CellList, 7);
-            //HighlightEssayType();
-        }
-
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            btnStart.Content = "Start " + e.NewValue + "%";
         }
 
         private void Filter_Click(object sender, RoutedEventArgs e)
@@ -60,22 +52,13 @@ namespace AussieCake.Templates
 
         private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
-            //if (cb_33.IsChecked.Value)
-            //    percentageTxt = 33;
-            //else
-                percentageTxt = 100 - slider.Value;
-
-            CellList = TemplateWPF.BuildTemplate(TemplateSumRetell.Words, percentageTxt, StkTemplate);
-            //HighlightEssayType();
-
-            btnFinish.IsEnabled = true;
-            lblScore.Visibility = Visibility.Hidden;
+            CellList = TemplateWPF.BuildTemplate(TemplateSumRetell.Words, slider.Value, StkTemplate);
+            Start();
         }
 
         private void BtnStart_ClickInit(object sender, RoutedEventArgs e)
         {
             CellList = TemplateWPF.BuildInitTemplate(StkTemplate, TemplateSumRetell.Words);
-
             Start();
         }
 
@@ -83,27 +66,6 @@ namespace AussieCake.Templates
         {
             btnFinish.IsEnabled = true;
             lblScore.Visibility = Visibility.Hidden;
-        }
-
-        private void Cb_33_Click(object sender, RoutedEventArgs e)
-        {
-            //if (Convert.ToBoolean(((CheckBox)sender).IsChecked.Value) == true)
-            //{
-            //    slider.IsEnabled = false;
-            //    btnStart.Content = "Start 33%";
-            //}
-            //else
-            //{
-                slider.IsEnabled = true;
-                percentageTxt = 100;
-                btnStart.Content = "Start " + slider.Value + "%";
-            //}
-
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            btnStart.Content = "Start 100%";
         }
     }
 }

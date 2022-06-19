@@ -122,7 +122,7 @@ namespace AussieCake.Question
                 lbl.MouseLeave += (source, e) => lbl.FontWeight = FontWeights.Regular;
 
                 if (QuestControl.Get(Model.Spell).Any(w => w.Text == chunck))
-                    lbl.Foreground = Brushes.Red;
+                    lbl.Foreground = Brushes.LightSalmon;
                 else 
                     lbl.MouseLeftButtonDown += (source, e) =>
                     {
