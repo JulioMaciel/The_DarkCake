@@ -34,17 +34,14 @@ namespace AussieCake.Question
         {
             actualQuest = QuestControl.GetRandomAvailableQuestion(Model.P_Dit, passedQuestIds);
 
-            if (cb_ASQ.IsChecked.Value)
+            if (rb_ASQ.IsChecked.Value)
                 while (((IPearsonVM)actualQuest).PearsonType != PearsonType.ASQ)
                     actualQuest = QuestControl.GetRandomAvailableQuestion(Model.P_Dit, passedQuestIds);
-            else if (cb_RS.IsChecked.Value)
+            else if (rb_RS.IsChecked.Value)
                 while (((IPearsonVM)actualQuest).PearsonType != PearsonType.RS)
                     actualQuest = QuestControl.GetRandomAvailableQuestion(Model.P_Dit, passedQuestIds);
-            else if (cb_WFD.IsChecked.Value)
+            else if (rb_WFD.IsChecked.Value)
                 while (((IPearsonVM)actualQuest).PearsonType != PearsonType.WFD)
-                    actualQuest = QuestControl.GetRandomAvailableQuestion(Model.P_Dit, passedQuestIds);
-            else
-                while (((IPearsonVM)actualQuest).PearsonType == PearsonType.ASQ)
                     actualQuest = QuestControl.GetRandomAvailableQuestion(Model.P_Dit, passedQuestIds);
 
             ShowAttributes();
@@ -65,29 +62,42 @@ namespace AussieCake.Question
             stkDiff.Children.Clear();
             btnStartSpeech.IsEnabled = true;
             btnStartSpeech.Focus();
+            Footer.Log("");
         }
 
         private async void BtnVerify_Click(object sender, RoutedEventArgs e)
         {
             passedQuestIds.Add(actualQuest.Id);
             btnRemoveAttempt.IsEnabled = true;
-            btnNext.IsEnabled = true;
-
             CheckAnswers();
             txtAnswer.Text = actualQuest.Text;
             ShowAttributes();
             btnVerify.IsEnabled = false;
-            btnNext.Focus();
 
             await FileHtmlControls.PlayPearson((P_Dit_VM)actualQuest);
+            btnNext.IsEnabled = true;
+            btnNext.Focus();
         }
 
         private void CheckAnswers()
         {
+            var theseQuests = QuestControl.Get(actualQuest.Type).Where(q => q is P_Dit_VM && (q as P_Dit_VM).PearsonType == (actualQuest as P_Dit_VM).PearsonType);
+            var theseQuestsToday = theseQuests.Where(q => q.Tries.Any() && q.Tries.Last().When.Date == DateTime.Today).Count();
+            var footerText = $"Completed {theseQuestsToday+1} of {theseQuests.Count()} {(actualQuest as P_Dit_VM).PearsonType.ToDesc()} today!";
+
+            if (theseQuests.Any(q => !q.Tries.Any()))
+                footerText += $" There are still {theseQuests.Where(q => !q.Tries.Any()).Count()-1} quests without tries.";
+
+            Footer.Log(footerText);
+
             if (actualQuest.Type == Model.P_Dit &&
                 (actualQuest as P_Dit_VM).PearsonType == PearsonType.RS &&
                 txtAttempt.IsEmpty())
+            {
+                var rs_vm = new AttemptVM(actualQuest.Id, 100, DateTime.Now, Model.P_Dit);
+                AttemptsControl.Insert(rs_vm);
                 return;
+            }
 
             var parts = actualQuest.Text.Split(new[] { ',', ' ', '.' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -144,7 +154,10 @@ namespace AussieCake.Question
             btnStartSpeech.IsEnabled = false;
             txtAttempt.Focus();
 
-            await FileHtmlControls.PlayPearson((P_Dit_VM)actualQuest);
+            //if (((IPearsonVM)actualQuest).PearsonType == PearsonType.RS)
+            //    await FileHtmlControls.PlayPearson((P_Dit_VM)actualQuest, true);
+            //else
+                await FileHtmlControls.PlayPearson((P_Dit_VM)actualQuest);
 
             btnVerify.IsEnabled = true;
         }
@@ -194,10 +207,15 @@ namespace AussieCake.Question
                 btnVerify.Focus();
         }
 
-        private void cb_Type_Click(object sender, RoutedEventArgs e)
+        //private void cb_Type_Click(object sender, RoutedEventArgs e)
+        //{
+        //    LoadNextQuest();
+        //    btnStartSpeech.Focus();
+        //}
+
+        private void rb_Type_Click(object sender, RoutedEventArgs e)
         {
-            LoadNextQuest();
-            btnStartSpeech.Focus();
+            BtnNext_Click(sender, e);
         }
     }
 }

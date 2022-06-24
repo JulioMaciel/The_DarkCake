@@ -75,9 +75,16 @@
 
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
 
-                <CheckBox x:Name="cb_ASQ" Content="ASQ" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
-                <CheckBox x:Name="cb_RS" Content="RS" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
-                <CheckBox x:Name="cb_WFD" Content="WFD" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" />
+                <!--<CheckBox x:Name="cb_ASQ" Content="ASQ" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" IsTabStop="False" />
+                <CheckBox x:Name="cb_RS" Content="RS" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" IsTabStop="False" />
+                <CheckBox x:Name="cb_WFD" Content="WFD" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="cb_Type_Click" IsTabStop="False" />-->
+
+                <RadioButton x:Name="rb_ASQ" Content="ASQ" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="rb_Type_Click" 
+                             IsTabStop="False" GroupName="rd_dic_type" />
+                <RadioButton x:Name="rb_RS" Content="RS" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="rb_Type_Click" 
+                             IsTabStop="False" GroupName="rd_dic_type" IsChecked="True" />
+                <RadioButton x:Name="rb_WFD" Content="WFD" Margin="0, 2, 8, 2" VerticalAlignment="Center" VerticalContentAlignment="Center" Click="rb_Type_Click" 
+                             IsTabStop="False" GroupName="rd_dic_type" />
 
                 <Button Name="btnStartSpeech" Content="Start Speech" Width="125"
                     Margin="0, 2, 8, 2" Click="BtnStartSpeech_Click" />

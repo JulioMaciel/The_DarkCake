@@ -29,8 +29,6 @@ namespace AussieCake.Question
 
             passedQuestIds = new List<int>();
             LoadNextQuest();
-
-            //PreviewKeyDown += (sender, e) => LastTxt_PreviewKeyDown(sender, e);
         }
 
         private void LoadNextQuest()
@@ -64,7 +62,6 @@ namespace AussieCake.Question
             btnNext.IsEnabled = true;
 
             CheckAnswers(actualCells, actualQuest);
-            //actualQuest = QuestControl.Get(actualQuest.Type).FirstOrDefault(q => q.Id == actualQuest.Id);
             ShowAttributes();
             btnVerify.IsEnabled = false;
         }
@@ -110,12 +107,6 @@ namespace AussieCake.Question
 
             lblChanceShow.ToolTip = actualQuest.Chance_toolTip;
             lblChanceShow.Content = actualQuest.Chance + ((IPearsonVM)actualQuest).GetUpdatedRealChance();
-
-            var doneToday = AttemptsControl.Get(Model.P_FIB).Where(x => x.When.Date == DateTime.Today).Count();
-            var total = QuestControl.Get(Model.P_FIB).Count();
-            lblMeta.Content = "Meta (" + doneToday + "/" + total + ")";
-            var percent_done = (int)Math.Round((double)(100 * doneToday) / total);
-            lblMeta.Foreground = UtilWPF.GetAvgColor(percent_done);
         }
 
         private void LastTxt_PreviewKeyDown(object sender, KeyEventArgs e)

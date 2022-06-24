@@ -77,42 +77,11 @@ namespace AussieCake.Templates
             var avaliable_cells = cellList.Where(w => w.IsAvailableToTurnTxtOn());
             int quantToAnswer = Convert.ToInt16(((double)avaliable_cells.Count() / 100) * percentageTextBox);
 
-            if (percentageTextBox != 33)
+
+            for (int i = 0; i < quantToAnswer; i++)
             {
-                for (int i = 0; i < quantToAnswer; i++)
-                {
-                    var rnd = cellList.Where(c => c.IsAvailableToTurnTxtOn()).PickRandom();
-                    rnd.TurnTxtOn();
-                }
-            }
-            else
-            {
-                // 35% most erroneous + 15% random -> remove 17 random
-
-                foreach (var item in cellList)
-                    item.Quest.LoadCrossData();
-
-                // aqui o Avg All ta chegando zerado... tem que dar Load em cada item quest
-                // such as item.Quest.LoadCrossData();
-                // depois que funcionar, levar o codigo para essay e sum spk blabla
-
-                var top25worst = cellList.OrderByDescending(x => x.Quest.Avg_all).Where(c => c.IsAvailableToTurnTxtOn()).Take(cellList.Count / 4);
-                var more15rnd = new List<CellTemplate>();
-
-                var fifteenPercent = Convert.ToInt16(((double)avaliable_cells.Count() / 100) * 15);
-                for (int i = 0; i < fifteenPercent; i++)
-                {
-                    var rnd = cellList.Where(c => c.IsAvailableToTurnTxtOn() && !top25worst.Any(x => x == c)).PickRandom();
-                    more15rnd.Add(rnd);
-                }
-
-                var chosen = top25worst.Union(more15rnd).GetRandomPercent(66);
-                foreach (var item in chosen.OrderBy(x => x.Quest.Avg_all))
-                {
-                    Console.WriteLine(item.Quest.Text + ": " + item.Quest.Avg_all);
-                    item.TurnTxtOn();
-                }
-                Console.WriteLine("---");
+                var rnd = cellList.Where(c => c.IsAvailableToTurnTxtOn()).PickRandom();
+                rnd.TurnTxtOn();
             }
 
             foreach (var stk in templateLines)

@@ -113,6 +113,11 @@ namespace AussieCake.Question
             double actual_index = 0;
 
             var quests = Get(type).Where(x => x.IsActive && !actual_chosen.Contains(x.Id));
+            if (!quests.Any())
+                quests = Get(type).Where(x => x.IsActive);
+
+            if (quests.Any(q => !q.Tries.Any()))
+                quests = quests.Where(q => !q.Tries.Any());
 
             foreach (var quest in quests)
             {

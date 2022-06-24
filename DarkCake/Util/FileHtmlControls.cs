@@ -148,7 +148,7 @@ namespace AussieCake.Util
             return false;
         }
 
-        public async static Task PlayPearson(IPearsonVM vm)
+        public async static Task PlayPearson(IPearsonVM vm, bool firstHalfOnly = false)
         {
             var fileWords = vm.Text.Split(' ');
             var fileName = PearsonTypeHelper.PersonModelToFileAbvMp3(vm.PearsonType) + "_" 
@@ -171,11 +171,21 @@ namespace AussieCake.Util
             {
                 using (WaveOut waveOut = new WaveOut(WaveCallbackInfo.FunctionCallback()))
                 {
+                    waveOut.Volume = 1;
                     await Task.Run(() =>
                     {
                         System.Threading.Thread.Sleep(300);
-                        waveOut.Init(blockAlignedStream);
+                        waveOut.Init(blockAlignedStream);                        
                         waveOut.Play();
+
+                        if (firstHalfOnly)
+                        {
+                            var duration = blockAlignedStream.TotalTime;
+                            var toDelay = TimeSpan.FromMilliseconds(duration.TotalMilliseconds * 0.55);
+                            Task.Delay(toDelay).ContinueWith(t => waveOut.Stop());
+                            //Task.Delay(toDelay).ContinueWith(t => waveOut.Volume = waveOut.Volume / 5);
+                        }
+
                         while (waveOut.PlaybackState == PlaybackState.Playing)
                         {
                             System.Threading.Thread.Sleep(100);

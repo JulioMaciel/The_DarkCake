@@ -57,8 +57,6 @@
                 <Button Name="btnRemoveAttempt" Content="Remove Attempt" Width="125" IsEnabled="False"                    
                     Margin="2, 2, 0, 2" Click="BtnRemoveAttempt_Click"/>
 
-                <Label Name="lblMeta" Content="Meta (3/124)" HorizontalAlignment="Center" Margin="80, 2, 0, 2" />
-
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">

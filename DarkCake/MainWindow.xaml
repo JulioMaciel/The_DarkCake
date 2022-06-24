@@ -73,17 +73,17 @@
         </StackPanel>
 
         <StackPanel Name="Menu" Grid.Column="0" Grid.Row="1" Margin="10,20,10,10">
-            <Button Content="Vocabulary" Name="btnVocabulary" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocabulary_Click" Margin="0,0,0,6" />
-            <Button Content="Vocabulary Challenge" Name="btnVocChallenge" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocChallenge_Click" Margin="0,0,0,6" />
+            <Button Content="Vocabulary" Name="btnVocabulary" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocabulary_Click" Margin="0,0,0,6" IsEnabled="False" />
+            <Button Content="Vocabulary Challenge" Name="btnVocChallenge" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnVocChallenge_Click" Margin="0,0,0,6" IsEnabled="False" />
             <Button Content="Spelling" Name="btnSpelling" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnSpelling_Click" Margin="0,0,0,6" />
             <Button Content="Spelling Challenge" Name="btnSpellChallenge" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnSpellChallenge_Click" Margin="0,0,0,6" />
             <Button Content="Pronunciation" Name="btnPronunciation" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPronunciation_Click" Margin="0,0,0,6" />
             <Button Content="Pronunciation Practicing" Name="btnPronunPract" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPronunPract_Click" Margin="0,0,0,6" />
             <Button Content="Essay" Name="btnEssay" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnEssay_Click" Margin="0,0,0,6"/>
-            <Button Content="Essay by Topic" Name="btnEssayByTopic" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnEssayByTopic_Click" Margin="0,0,0,6" />
+            <Button Content="Essay by Topic" Name="btnEssayByTopic" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnEssayByTopic_Click" Margin="0,0,0,6" IsEnabled="False" />
             <Button Content="Describe Image" Name="btnDescImg" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnDescImg_Click" Margin="0,0,0,6"/>
             <Button Content="Summarize Spoken Text" Name="btnSumRetell" Height="30" Style="{StaticResource BaseButtonStyle}" Click="btnSumRetell_Click" Margin="0,0,0,6" />
-            <Button Content="Pearson FIB" Name="btnPearsonFIB" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPearsonFIB_Click" Margin="0,0,0,6" />
+            <Button Content="Pearson FIB" Name="btnPearsonFIB" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPearsonFIB_Click" Margin="0,0,0,6" IsEnabled="False" />
             <Button Content="Pearson Ditaction" Name="btnPearsonDit" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnPearsonDit_Click" Margin="0,0,0,6" />
        <!-- <Button Content="Rename Move Last Audio" Name="btnLastAudio" Height="30" Style="{StaticResource BaseButtonStyle}" Click="BtnLastAudio_Click" Margin="0,20,0,6" /> -->
         </StackPanel>

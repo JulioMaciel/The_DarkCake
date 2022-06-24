@@ -18,7 +18,6 @@ namespace AussieCake.Challenge
     {
         List<ChalLine> lines = new List<ChalLine>(4);
         List<int> actual_chosen = new List<int>();
-        Label lblMeta = new Label();
 
         public SpellChallenge()
         {
@@ -50,24 +49,6 @@ namespace AussieCake.Challenge
             btn_verify.Click += (source, e) => lines.ForEach(x => ChalWPFControl.Verify(x, btn_verify, btn_next));
 
             MyBtns.Chal_next(btn_next, stk_btns, btn_verify, userControlGrid, lines, Model.Spell, actual_chosen);
-            btn_next.Click += (source, e) => UpdateMetaLabel();
-
-            UtilWPF.SetGridPosition(lblMeta, 0, 0, grid);
-            lblMeta.HorizontalAlignment = HorizontalAlignment.Left;
-            lblMeta.VerticalAlignment = VerticalAlignment.Center;
-            UpdateMetaLabel();
-
-            //foreach (var txt in userControlGrid.GetChildren<TextBox>())
-            //    txt.PreviewKeyDown += (sender, e) => LastTxt_PreviewKeyDown(sender, e);
-        }
-
-        private void UpdateMetaLabel()
-        {
-            var doneToday = AttemptsControl.Get(Model.Spell).Where(x => x.When.Date == DateTime.Today).Count();
-            var total = QuestControl.Get(Model.Spell).Count();
-            lblMeta.Content = "Meta (" + doneToday + "/" + total / 2 + ")";
-            var percent_done = (int)Math.Round((double)(100 * doneToday) / (total / 2));
-            lblMeta.Foreground = UtilWPF.GetAvgColor(percent_done);
         }
 
         //private void LastTxt_PreviewKeyDown(object sender, KeyEventArgs e)
